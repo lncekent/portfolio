@@ -16,7 +16,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
           <ul className="flex gap-4 w-full flex-wrap">
             <li className="w-9">
               <a
-                href="https://github.com/Lance19Kent"
+                href="https://github.com/lncekent"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -29,7 +29,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
             </li>
             <li className="w-9">
               <a
-                href="https://www.facebook.com/lncekent/"
+                href="https://www.facebook.com/lance.kent.geoffrey/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
