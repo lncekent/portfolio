@@ -51,7 +51,7 @@ function BlogContent() {
             <Link
               key="feat-post-m"
               to={`/blog-selected/${featuredPost.slug}`}
-              className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform relative w-full flex flex-col justify-end overflow-hidden rounded-[14px] aspect-4/2.5 lg:aspect-5/3 cursor-pointer group shadow-sm hover:shadow-md transition-shadow"
+              className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform relative w-full flex flex-col justify-end overflow-hidden rounded-[14px] aspect-4/2.5 lg:aspect-5/3 cursor-pointer group  transition-shadow"
             >
               {featuredPost.thumbnail ? (
                 <img
@@ -90,7 +90,7 @@ function BlogContent() {
               <Link
                 key={post.id}
                 to={`/blog-selected/${post.slug}`}
-                className="relative w-full flex flex-col justify-end overflow-hidden rounded-2xl aspect-4/2.5 lg:aspect-4/3 cursor-pointer group shadow-sm hover:shadow-md transition-shadow"
+                className="relative w-full flex flex-col justify-end overflow-hidden rounded-2xl aspect-4/2.5 lg:aspect-4/3 cursor-pointer group transition-shadow"
               >
                 {post.thumbnail ? (
                   <img

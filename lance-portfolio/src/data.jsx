@@ -701,7 +701,7 @@ export const projectsData = [
     description:
       "An AI-driven mobile application capable of identifying plant diseases and providing actionable organic treatment recommendations.",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301198/bakehub-thumbnail_oxaoul.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779533347/PlantCam_Thumbnail_xtcxgj.png",
     status: "Public",
     role: "Full-Stack Developer",
     type: "Academic Project",
@@ -717,6 +717,7 @@ export const projectsData = [
       "JAVASCRIPT",
       "TENSORFLOW",
       "PYTHON",
+      "TINYDB",
     ],
     content: {
       images: [
@@ -729,23 +730,27 @@ export const projectsData = [
         "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301388/bakehub-mobile_aqqiyd.png",
       ],
       overview:
-        "BakeHub is a full-featured e-commerce web application developed as a capstone academic project. Tasked with creating a robust online storefront with administrative capabilities, our team chose a bakery business model. As the sole Full-Stack Developer, I spearheaded the entire technical lifecycle—from architecting the MySQL database and engineering the VB.NET backend, to designing an intuitive UI/UX with Tailwind CSS and JavaScript.",
+        "PlantCam is an AI-powered mobile application designed for real-time plant disease diagnosis and smart treatment recommendations. Built with an MIT App Inventor and WebViewer frontend, the system relies on a custom machine learning model trained via Google Colab. Utilizing a Kaggle dataset of 18,000 images, the AI focuses on identifying diseases in solanaceous crops (potato, tomato, and pepper). To support the application, a dedicated promotional website was also developed for product marketing, highlighting the app's functionality, data transparency, and legal documentation.",
       features: [
         {
-          title: "Dynamic Storefront",
-          desc: "Interactive home, about, and contact pages tailored for a bakery business.",
+          title: "Custom AI Model",
+          desc: "Engineered a personalized machine learning model using Google Colab, trained on 18,000+ PlantVillage datasets specific to solanaceous plants.",
         },
         {
-          title: "Comprehensive Admin Dashboard",
-          desc: "Secure portal for administrators to manage inventory, track orders, and oversee user accounts.",
+          title: "Promotional Landing Page",
+          desc: "A fully responsive website designed for product branding, outlining app features, AI methodologies, and privacy policies.",
         },
         {
-          title: "Customer Feedback System",
-          desc: "Integrated functionality allowing users to submit reviews and feedback directly to the admin.",
+          title: "Garden Health Analytics",
+          desc: "Tracks analyzed plants and provides users with a dynamic 'health bar' to visually monitor the overall status of their garden.",
         },
         {
-          title: "Secure Data Management",
-          desc: "Robust backend utilizing VB.NET and MySQL to ensure data integrity and secure transactions.",
+          title: "Local Storage via TinyDB",
+          desc: "Developed a lightweight and robust local backend using TinyDB to securely log and retrieve the history of all scanned plants.",
+        },
+        {
+          title: "Flexible Image Processing",
+          desc: "Integrated native camera capture and manual gallery upload functionalities for seamless and accurate AI disease detection.",
         },
       ],
     },
