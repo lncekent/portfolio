@@ -695,26 +695,28 @@ export const blogsData = [
 export const projectsData = [
   {
     id: 1,
-    slug: "bakehub",
-    title: "Bakehub",
-    date: "December 13, 2025",
+    slug: "plantcam",
+    title: "PlantCam",
+    date: "May 11, 2026",
     description:
-      "A comprehensive e-commerce platform dedicated for bakery business management and seamless ordering.",
+      "An AI-driven mobile application capable of identifying plant diseases and providing actionable organic treatment recommendations.",
     thumbnail:
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301198/bakehub-thumbnail_oxaoul.png",
     status: "Public",
     role: "Full-Stack Developer",
     type: "Academic Project",
     duration: "14 Days",
-    githubLink: "https://github.com/Lance19Kent/Bakehub",
-    liveLink: "",
+    githubLink: "https://github.com/lncekent/plantcam-promotional",
+    liveLink:
+      "https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto,f_auto/v1779065318/plantcam-demo_rxyhfc.mp4",
     techStack: [
-      "VB.NET",
-      "CSS3",
+      "MIT APP INVENTOR",
+      "CSS",
       "TAILWIND CSS",
       "HTML5",
       "JAVASCRIPT",
-      "MYSQL",
+      "TENSORFLOW",
+      "PYTHON",
     ],
     content: {
       images: [
@@ -762,7 +764,7 @@ export const projectsData = [
     role: "System Analyst & Front-End Developer",
     type: "Academic Project (Systems Integration)",
     duration: "30 Days",
-    githubLink: "https://github.com/Lance19Kent/BIRIMS",
+    githubLink: "https://github.com/lncekent/BIRIMS",
     liveLink: "",
 
     techStack: [
@@ -822,7 +824,7 @@ export const projectsData = [
     role: "Front-End Developer & UI/UX Designer",
     type: "Personal Project",
     duration: "30 Days",
-    githubLink: "https://github.com/Lance19Kent/Portfolio",
+    githubLink: "https://github.com/lncekent/Portfolio",
     liveLink: "",
 
     techStack: [
@@ -869,47 +871,55 @@ export const projectsData = [
   },
   {
     id: 4,
-    slug: "color-game",
-    title: "Color Game",
-    date: "January 16, 2025",
+    slug: "bakehub",
+    title: "Bakehub",
+    date: "December 13, 2025",
     description:
-      "A fast-paced cognitive game that tests reflexes by tricking the brain with mismatched text and color hues.",
-    // thumbnail: "/projects-assets/color-game/color-game-home.png",
+      "A comprehensive e-commerce platform dedicated for bakery business management and seamless ordering.",
+    thumbnail:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301198/bakehub-thumbnail_oxaoul.png",
     status: "Public",
-
-    role: "Software Developer",
-    type: "Commission Project",
-    duration: "1 Day",
-    githubLink: "https://github.com/Lance19Kent/Color-Game-in-VB",
+    role: "Full-Stack Developer",
+    type: "Academic Project",
+    duration: "14 Days",
+    githubLink: "https://github.com/lncekent/Bakehub",
     liveLink: "",
-
-    techStack: ["VB.NET", "MYSQL"],
-
+    techStack: [
+      "VB.NET",
+      "CSS3",
+      "TAILWIND CSS",
+      "HTML5",
+      "JAVASCRIPT",
+      "MYSQL",
+    ],
     content: {
       images: [
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301869/color-game-home_etjtez.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301182/bakehub-image1_hc1jnw.png",
       ],
       gallery: [
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301875/color-game-image_nco7hz.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301177/bakehub-dashboard_ziaekf.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301173/bakehub-cart_ld0dyz.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301188/bakehub-menu_l4qopa.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301388/bakehub-mobile_aqqiyd.png",
       ],
       overview:
-        "Developed as a rapid-turnaround freelance commission, the Color Game is an interactive desktop application built entirely in 1 day using VB.NET and MySQL. The game tests user cognitive reflexes using a psychological phenomenon known as the 'Stroop Effect'—challenging players to identify the correct color hue while being distracted by conflicting text labels. I engineered the core game loop, user interface, and database integration under a strict 24-hour deadline, delivering a fun and fully functional product.",
+        "BakeHub is a full-featured e-commerce web application developed as a capstone academic project. Tasked with creating a robust online storefront with administrative capabilities, our team chose a bakery business model. As the sole Full-Stack Developer, I spearheaded the entire technical lifecycle—from architecting the MySQL database and engineering the VB.NET backend, to designing an intuitive UI/UX with Tailwind CSS and JavaScript.",
       features: [
         {
-          title: "Cognitive Gameplay Mechanic",
-          desc: "Utilizes the Stroop effect to challenge players by mismatching text colors and names, testing speed and accuracy.",
+          title: "Dynamic Storefront",
+          desc: "Interactive home, about, and contact pages tailored for a bakery business.",
         },
         {
-          title: "Score & Time Tracking",
-          desc: "Features a built-in countdown timer and a point system to increase difficulty and player engagement.",
+          title: "Comprehensive Admin Dashboard",
+          desc: "Secure portal for administrators to manage inventory, track orders, and oversee user accounts.",
         },
         {
-          title: "Database Integration",
-          desc: "Connected to a MySQL database backend to securely record, store, and retrieve player high scores.",
+          title: "Customer Feedback System",
+          desc: "Integrated functionality allowing users to submit reviews and feedback directly to the admin.",
         },
         {
-          title: "Rapid Development Lifecycle",
-          desc: "Successfully designed, coded, tested, and deployed a complete desktop application within a 24-hour commission timeframe.",
+          title: "Secure Data Management",
+          desc: "Robust backend utilizing VB.NET and MySQL to ensure data integrity and secure transactions.",
         },
       ],
     },
@@ -926,7 +936,7 @@ export const projectsData = [
     role: "Project Manager & Front-End Developer",
     type: "Academic Project",
     duration: "30 Days",
-    githubLink: "https://github.com/Lance19Kent/Belveth",
+    githubLink: "https://github.com/lncekent/Belveth",
     liveLink: "",
 
     techStack: ["HTML5", "CSS3", "JAVASCRIPT", "MYSQL"], // The classic trio
@@ -974,7 +984,7 @@ export const projectsData = [
     type: "TESDA Capstone Project (NC III)",
     duration: "10 Days",
     githubLink:
-      "https://github.com/Lance19Kent/Book-Buddy-A-Library-Management-System",
+      "https://github.com/lncekent/Book-Buddy-A-Library-Management-System",
     liveLink: "",
 
     techStack: ["JAVA", "SQL", "GITHUB"],
@@ -1020,7 +1030,7 @@ export const projectsData = [
     type: "Academic Hardware Project",
     duration: "30 days",
     githubLink:
-      "https://github.com/Lance19Kent/1ST-Year/tree/main/PLATFORM%20TECHNOLOGIES/Arduino-Project_1stYear2ndSem-main",
+      "https://github.com/lncekent/1ST-Year/tree/main/PLATFORM%20TECHNOLOGIES/Arduino-Project_1stYear2ndSem-main",
     liveLink: "",
 
     techStack: ["C++", "VB.NET", "ARDUINO IDE", "FIGMA"],

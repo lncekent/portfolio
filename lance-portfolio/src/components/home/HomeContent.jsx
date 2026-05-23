@@ -89,7 +89,7 @@ function Content() {
     return (
       <div className="w-full flex flex-col gap-3 lg:p-0 p-3 lg:overflow-y-auto no-scrollbar lg:py-3 select-none ">
         {/* Hero Banner Skeleton */}
-        <div className="w-full flex flex-col rounded-[14px] border border-zinc-200 dark:border-zinc-800 shadow-sm shrink-0 overflow-hidden relative group select-none">
+        <div className="w-full flex flex-col rounded-[14px] shrink-0 overflow-hidden relative group select-none">
           <Skeleton className="w-full absolute inset-0 z-0 rounded-none " />
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent z-10 pointer-events-none"></div>
 
@@ -158,7 +158,7 @@ function Content() {
 
   return (
     <div className="w-full flex flex-col gap-3 lg:p-0 p-3 lg:overflow-y-auto lg:no-scrollbar lg:py-3 select-none">
-      <div className="w-full flex flex-col bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent rounded-[14px] border border-zinc-200 dark:border-zinc-800 shadow-sm shrink-0 overflow-hidden relative group">
+      <div className="w-full flex flex-col bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent rounded-[14px]  shrink-0 overflow-hidden relative group">
         <div
           key="hero-m"
           className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform w-full relative h-90 sm:h-80 lg:h-72"
@@ -327,7 +327,7 @@ function Content() {
             )
           }
         >
-          {blogsData.slice(0,5).map((post) => (
+          {blogsData.slice(0, 5).map((post) => (
             <Link
               key={post.id}
               to={`/blog-selected/${post.slug}`}

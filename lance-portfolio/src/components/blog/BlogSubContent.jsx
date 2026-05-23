@@ -64,9 +64,9 @@ function BlogSubContent() {
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="w-full flex border rounded-2xl overflow-hidden shrink-0"
+                className="w-full flex rounded-2xl overflow-hidden shrink-0"
               >
-                <div className="lg:aspect-4/2 aspect-square w-3/4 lg:w-75 min-w-20 relative rounded-none shrink-0 border-r border-zinc-200 dark:border-zinc-800">
+                <div className="lg:aspect-4/2 aspect-square w-3/4 lg:w-full min-w-20 relative rounded-none shrink-0 border-zinc-200 dark:border-zinc-800">
                   <Skeleton className="absolute inset-0 w-full h-full rounded-none" />
                 </div>
                 <div className="w-full p-3 bg-white dark:bg-zinc-900/40 rounded-none flex flex-col gap-2 justify-center lg:justify-start">
@@ -112,25 +112,25 @@ function BlogSubContent() {
       >
         <div
           key="bp-m"
-          className="animate-in fade-in duration-700 delay-250 fill-mode-both transform-gpu will-change-transform flex flex-col w-full gap-3"
+          className="animate-in fade-in duration-700 delay-250 fill-mode-both transform-gpu will-change-transform flex flex-col w-full gap-3 h-full"
         >
           {currentPosts.length > 0 ? (
             currentPosts.map((post) => (
               <Link
                 key={post.id}
                 to={`/blog-selected/${post.slug}`}
-                className="w-full flex cursor-pointer group border rounded-2xl"
+                className="w-full flex cursor-pointer group border rounded-2xl overflow-hidden"
               >
-                <div className="lg:aspect-4/2 aspect-square  dark:bg-zinc-900/40  w-3/4 lg:w-75 min-w-20 overflow-hidden relative rounded-l-2xl">
+                <div className="lg:aspect-4/2 aspect-square dark:bg-zinc-900/40 w-3/4 lg:w-75 min-w-20 overflow-hidden relative">
                   {post.thumbnail && (
                     <img
                       src={post.thumbnail}
                       alt={post.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   )}
                 </div>
-                <div className="w-full p-3 bg-white dark:bg-zinc-900/40 rounded-r-2xl flex flex-col gap-1 justify-center lg:justify-start ">
+                <div className="w-full p-3 bg-white dark:bg-zinc-900/40  flex flex-col gap-1 justify-center lg:justify-start overflow-hidden">
                   <h1 className="font-semibold lg:text-[15px] text-[14px] line-clamp-3">
                     {post.title}
                   </h1>
