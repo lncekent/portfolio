@@ -91,7 +91,9 @@ function ProjectsContent() {
                 <img
                   src={post.thumbnail}
                   alt={post.title + "'s Image"}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+
+                  //  No janking by the use of will-change, transform and backface
+                  className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform transform-gpu backface-hidden"
                 />
               </div>
 
