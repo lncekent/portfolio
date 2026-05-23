@@ -96,7 +96,7 @@ function BlogContent() {
                   <img
                     src={post.thumbnail}
                     alt={post.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 transform-cpu will-change-transform backface-hidden"
                   />
                 ) : (
                   <div className="absolute inset-0 w-full h-full bg-[#DEDEDE] dark:bg-zinc-800"></div>

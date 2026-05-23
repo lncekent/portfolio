@@ -185,7 +185,7 @@ export const blogsData = [
       "Stepping Up to the Stage: My First Talk on System Architecture at Apollo 2026",
     date: "February 09, 2026",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298202/apollo-2026-thumbnail_kk2rse.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1775298202/apollo-2026-thumbnail_kk2rse.png",
     contentImages: [
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298195/me-apollo_ssa3qt.jpg",
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298193/apollo-groupie_f3w9hj.jpg",
@@ -234,7 +234,7 @@ export const blogsData = [
     title: "Building the Foundation: Earning My First Web Certificate",
     date: "November 24, 2024",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298373/fcc-thumbnail_q9yo5m.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1775298373/fcc-thumbnail_q9yo5m.png",
     contentImages: [
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298366/fcc-image1_w6wamb.png",
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298370/fcc-image2_eq5elp.jpg",
@@ -295,7 +295,7 @@ export const blogsData = [
     title: "Little KOWders: My Experience as a Volunteer Trainer",
     date: "November 19, 2025",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298500/little-kowder-thumbnail_fb0nnz.jpg",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1775298500/little-kowder-thumbnail_fb0nnz.jpg",
     contentImages: [
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298485/little-kowder-image1_tfa27h.jpg",
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298489/little-kowder-image2_flvklq.jpg",
@@ -353,7 +353,7 @@ export const blogsData = [
     title: "Design IT: 2nd Runner-Up with E'vante",
     date: "November 18, 2025",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298591/nyx-thumbnail_q2evp5.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_500/v1775298591/nyx-thumbnail_q2evp5.png",
     contentImages: [
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298578/nyx-image1_ufaxun.jpg",
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298583/nyx-image2_nvqth6.jpg",
@@ -522,7 +522,7 @@ export const blogsData = [
     title: "Software Freedom Day: Tara, Mag Open Source Tayo!",
     date: "September 20, 2025",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298820/sfd-thumbnail_b5jupc.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1500/v1775298820/sfd-thumbnail_b5jupc.png",
     contentImages: [
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298812/sfd-image1_b0pwfm.jpg",
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298816/sfd-image2_ufo6yt.jpg",
@@ -580,7 +580,7 @@ export const blogsData = [
     title: "Beyond the Code: Bridging Leadership at the 2024 Youth Summit",
     date: "September 05, 2024",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298899/youth-summit-thumbnail_lx1nf5.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_700/v1775298899/youth-summit-thumbnail_lx1nf5.png",
     contentImages: [
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298904/ys-image1_uddlv1.jpg",
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775298930/ys-image2_f7oiy0.jpg",
@@ -638,7 +638,7 @@ export const blogsData = [
     title: "GEN AI to Z: Navigating the Future of Tech at UP Diliman",
     date: "March 17, 2026",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775299060/gen-ai-thumbnail_xafknk.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1100/v1775299060/gen-ai-thumbnail_xafknk.png",
     contentImages: [
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775299065/gen-image1_ek1xgm.jpg",
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775299108/gen-image2_irsoge.jpg",

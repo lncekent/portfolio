@@ -126,7 +126,7 @@ function BlogSubContent() {
                     <img
                       src={post.thumbnail}
                       alt={post.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 will-change-transform transform-cpu backface-hidden"
                     />
                   )}
                 </div>
