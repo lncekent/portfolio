@@ -207,6 +207,8 @@ function BlogSelectedContent() {
               <img
                 src={post.contentImages[0]}
                 alt={`${post.title} Image 1`}
+                loading="eager"
+                fetchPriority="high"
                 className="w-full rounded-[10px] object-cover ring-1 ring-black/5 dark:ring-white/10 shadow-sm"
               />
             </div>
@@ -223,6 +225,8 @@ function BlogSelectedContent() {
               <img
                 src={post.contentImages[1]}
                 alt={`${post.title} Image 2`}
+                loading="eager"
+                fetchPriority="high"
                 className="w-full rounded-[10px] object-cover shadow-sm ring-1 ring-black/5 dark:ring-white/10"
               />
             </div>

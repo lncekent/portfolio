@@ -708,7 +708,7 @@ export const projectsData = [
     duration: "14 Days",
     githubLink: "https://github.com/lncekent/plantcam-promotional",
     liveLink:
-      "https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto,f_auto/v1779065318/plantcam-demo_rxyhfc.mp4",
+      "https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto:best,vc_auto,f_auto/v1779065318/plantcam-demo_rxyhfc.mp4",
     techStack: [
       "MIT APP INVENTOR",
       "CSS",
@@ -721,7 +721,7 @@ export const projectsData = [
     ],
     content: {
       images: [
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301182/bakehub-image1_hc1jnw.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779539894/Screenshot_2026-05-23_203756_qylbqz.png",
       ],
       gallery: [
         "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301177/bakehub-dashboard_ziaekf.png",
