@@ -127,12 +127,14 @@ function ProjectSubContent({
             ))}
           </div>
           {showViewAll && (
-            <Link
-              to="/projects"
-              className="w-full text-center text-[14px] font-medium text-[#468cfc] hover:text-[#92bcff] transition-colors pt-2 pb-1"
-            >
-              View All Projects →
-            </Link>
+            <div className="w-full justify-center flex">
+              <Link
+                to="/projects"
+                className="text-center text-[14px] font-medium text-[#468cfc] hover:text-[#92bcff] transition-colors pt-2 pb-1"
+              >
+                View All Projects →
+              </Link>
+            </div>
           )}
         </div>
       </BentoCard>

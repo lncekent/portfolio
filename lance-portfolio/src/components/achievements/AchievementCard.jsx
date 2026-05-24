@@ -24,7 +24,9 @@ function AchievementCard({ data, list, variant = "card" }) {
     <Dialog
       className={"w-full"}
       onOpenChange={(open) => {
-        if (!open) setCurrentIndex(initialIndex);
+        if (!open) {
+          setTimeout(() => setCurrentIndex(initialIndex), 200);
+        }
       }}
     >
       {variant === "card" ? (

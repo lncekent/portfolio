@@ -310,12 +310,14 @@ function AboutContent() {
               </div>
             ))}
           </div>
-          <Link
-            to={"/achievements"}
-            className="text-center block text-[#3FA6F4] hover:underline lg:text-[15px] text-sm"
-          >
-            See More
-          </Link>
+          <div className="w-full flex items-center justify-center">
+            <Link
+              to={"/achievements"}
+              className="text-center text-[#3FA6F4] hover:underline lg:text-[15px] text-sm"
+            >
+              See More
+            </Link>
+          </div>
         </div>
       </BentoCard>
     </div>
