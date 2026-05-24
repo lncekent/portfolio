@@ -63,15 +63,15 @@ function AboutContent() {
           <div className="w-full relative h-70 sm:h-75 lg:h-64 z-20">
             <div className="absolute bottom-5 left-5 right-5 lg:bottom-8 lg:left-8 lg:right-auto z-20 flex flex-col gap-3 lg:gap-4 max-w-2xl">
               <div className="flex flex-col gap-2 w-full">
-                <Skeleton className="h-8 lg:h-10 w-[250px] bg-white/20" />
-                <div className="mt-1 lg:mt-3 flex flex-col gap-2 w-[95%] lg:w-[450px]">
+                <Skeleton className="h-8 lg:h-10 w-62.5 bg-white/20" />
+                <div className="mt-1 lg:mt-3 flex flex-col gap-2 w-[95%] lg:w-112.5">
                   <Skeleton className="h-4 w-[90%] bg-white/20" />
                   <Skeleton className="h-4 w-[80%] bg-white/20" />
                   <Skeleton className="h-4 w-[70%] bg-white/20" />
                 </div>
               </div>
               <div className="flex lg:flex-row flex-col items-start gap-3 mt-1 lg:mt-2 w-full lg:w-auto">
-                <Skeleton className="w-[90%] sm:w-[150px] h-14 lg:h-[26px] rounded-[10px] bg-white/20" />
+                <Skeleton className="w-[90%] sm:w-37.5 h-14 lg:h-6.5 rounded-[10px] bg-white/20" />
               </div>
             </div>
           </div>
@@ -234,7 +234,7 @@ function AboutContent() {
         >
           <ChevronRight
             strokeWidth={1.25}
-            className={`w-[30px] h-[30px] transition-colors duration-75 ${canHighlightsRight ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
+            className={`w-7.5 h-7.5 transition-colors duration-75 ${canHighlightsRight ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
           />
         </div>
         <div
@@ -245,7 +245,7 @@ function AboutContent() {
         >
           <ChevronLeft
             strokeWidth={1.25}
-            className={`w-[30px] h-[30px] transition-colors duration-75 ${canHighlightsLeft ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
+            className={`w-7.5 h-7.5 transition-colors duration-75 ${canHighlightsLeft ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
           />
         </div>
         <div

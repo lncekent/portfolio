@@ -107,13 +107,13 @@ function Content() {
                 <div className="mt-1 lg:mt-3 flex flex-col gap-2 w-full">
                   <Skeleton className="h-4 w-[90%] bg-white/20" />
                   <Skeleton className="h-4 w-[80%] bg-white/20" />
-                  <Skeleton className="h-4 w-[60%] lg:w-[250px] bg-white/20" />
+                  <Skeleton className="h-4 w-[60%] lg:w-62.5 bg-white/20" />
                 </div>
               </div>
 
               <div className="flex lg:flex-row flex-col items-start gap-3 mt-1 lg:mt-2">
-                <Skeleton className="w-full sm:w-[140px] h-[46px] lg:h-[38px] rounded-[10px] bg-white/20" />
-                <Skeleton className="w-full sm:w-[180px] h-[46px] lg:h-[38px] rounded-[10px] bg-white/20" />
+                <Skeleton className="w-full sm:w-35 h-11.5 lg:h-9.5 rounded-[10px] bg-white/20" />
+                <Skeleton className="w-full sm:w-45 h-11.5 lg:h-9.5 rounded-[10px] bg-white/20" />
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ function Content() {
         >
           <ChevronRight
             strokeWidth={1.25}
-            className={`w-[30px] h-[30px] transition-colors duration-75 ${canHighlightsRight ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
+            className={`w-7.5 h-7.5 transition-colors duration-75 ${canHighlightsRight ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
           />
         </div>
         <div
@@ -313,7 +313,7 @@ function Content() {
         >
           <ChevronLeft
             strokeWidth={1.25}
-            className={`w-[30px] h-[30px] transition-colors duration-75 ${canHighlightsLeft ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
+            className={`w-7.5 h-7.5 transition-colors duration-75 ${canHighlightsLeft ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
           />
         </div>
         <div
