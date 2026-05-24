@@ -763,7 +763,7 @@ export const projectsData = [
     description:
       "A barangay management system designed to digitalize local government operations, resident records, and document requests.",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779611017/BIRIMS_Thumbnail_1_ynh3ik.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779611891/BIRIMS_Thumbnail_nodpbe.png",
     status: "Public",
 
     role: "System Analyst & Front-End Developer",
