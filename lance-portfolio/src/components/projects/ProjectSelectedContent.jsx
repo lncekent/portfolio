@@ -205,16 +205,16 @@ function ProjectSelectedContent({ project }) {
                   Project Highlights
                 </h2>
 
-                <div className="grid grid-cols-1  gap-4">
+                <div className="grid grid-cols-1 lg:gap-6 gap-3">
                   {project.content.gallery.map((img, idx) => (
                     <div
                       key={idx}
-                      className="w-full rounded-[10px] overflow-hidden ring-1 ring-black/5 dark:ring-white/10 aspect-video bg-zinc-100 dark:bg-zinc-800 group"
+                      className="w-full rounded-[10px] overflow-hidden ring-1 ring-black/5 dark:ring-white/10  bg-zinc-100 dark:bg-zinc-800 group"
                     >
                       <img
                         src={img}
                         alt={`${project.title} screenshot ${idx + 1}`}
-                        className="w-full h-full object-contain repeat- transition-transform duration-500 ease-out "
+                        className="w-full h-full object-contain transition-transform duration-500 ease-out "
                       />
                     </div>
                   ))}

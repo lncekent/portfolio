@@ -844,11 +844,11 @@ export const projectsData = [
 
     content: {
       images: [
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301711/portfolio-home_fbqh3b.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779612994/Screenshot_2026-05-24_165517_ftou5d.png",
       ],
       gallery: [
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301717/portfolio-resume_mgpyfd.png",
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301694/portfolio-about_gjgh5y.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779612997/Screenshot_2026-05-24_165552_yumm9u.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779612995/Screenshot_2026-05-24_165530_jqxk9j.png",
         "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301705/portfolio-certs_tgnhaj.png",
         "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301700/portfolio-blog_ldeuau.png",
       ],
