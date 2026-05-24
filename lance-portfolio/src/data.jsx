@@ -729,7 +729,7 @@ export const projectsData = [
         "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779619154/Screenshot_2026-05-24_183843_l6li8c.png",
       ],
       overview:
-        "PlantCam is an AI-powered mobile application designed for real-time plant disease diagnosis and smart treatment recommendations. Built with an MIT App Inventor and WebViewer frontend, the system relies on a custom machine learning model trained via Google Colab. Utilizing a Kaggle dataset of 18,000 images, the AI focuses on identifying diseases in solanaceous crops (potato, tomato, and pepper). To support the application, a dedicated promotional website was also developed for product marketing, highlighting the app's functionality, data transparency, and legal documentation.",
+        "PlantCam is an AI-powered mobile application designed for real-time plant disease diagnosis and smart treatment recommendations. Built with an MIT App Inventor and WebViewer frontend, the system relies on a custom machine learning model trained via Google Colab. Utilizing a Kaggle dataset of 18,000 images, the AI focuses on identifying diseases in solanaceous crops (potato, tomato, and pepper). To support the application, a dedicated promotional website was also developed for product marketing, highlighting the app's functionality, data transparency, and legal documentation. Special thanks to my groupmates, Ma. Alexsandra A. Mopon, Arth Angelo B. Mendoza, and Diana Paula R. Lopez, for their invaluable teamwork and collaboration during the development of this project.",
       features: [
         {
           title: "Custom AI Model",
