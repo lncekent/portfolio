@@ -124,7 +124,7 @@ function AboutSubContent() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Calendar className="stroke-[#9D9D9D] w-[14px] h-[14px]" />
+                  <Calendar className="stroke-[#9D9D9D] w-3.5 h-3.5" />
                   <p className="text-[12px] text-[#9D9D9D]">{item.date}</p>
                 </div>
                 <p className="text-[13px] lg:text-[14px] leading-relaxed text-zinc-600 dark:text-zinc-400 font-light">
@@ -163,7 +163,7 @@ function AboutSubContent() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Calendar className="stroke-[#9D9D9D] w-[14px] h-[14px]" />{" "}
+                  <Calendar className="stroke-[#9D9D9D] w-3.5 h-3.5" />{" "}
                   <p className="text-[12px] text-[#9D9D9D]">{job.date}</p>
                 </div>
                 <p className="text-[13px] lg:text-[14px] leading-relaxed text-zinc-600 dark:text-zinc-400 font-light">

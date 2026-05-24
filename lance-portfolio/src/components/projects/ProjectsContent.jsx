@@ -118,7 +118,7 @@ function ProjectsContent() {
                 {/* "Read More" subtle cue */}
                 <div className="mt-4 flex items-center gap-1 text-[#468cfc] transition-colors duration-300 group-hover:text-[#92bcff] ease-out">
                   <span className="text-[13px] font-medium">View Project</span>
-                  <ArrowRight className="w-[14px] h-[14px]" />
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
             </Link>

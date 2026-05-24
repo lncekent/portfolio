@@ -200,7 +200,7 @@ function Sidebar() {
                   }
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Download className="w-[16px] h-[16px] stroke-current" />
+                  <Download className="w-4 h-4 stroke-current" />
                   <span className="text-sm">Resume</span>
                 </NavLink>
               </div>
@@ -218,7 +218,7 @@ function Sidebar() {
                 >
                   <House
                     strokeWidth={1.5}
-                    className="w-[16px] h-[16px] stroke-current"
+                    className="w-4 h-4 stroke-current"
                   />
                   <p className="text-sm">Home</p>
                 </NavLink>
@@ -234,7 +234,7 @@ function Sidebar() {
                 >
                   <User
                     strokeWidth={1.5}
-                    className="w-[16px] h-[16px] stroke-current"
+                    className="w-4 h-4 stroke-current"
                   />
                   <p className="text-sm">About</p>
                 </NavLink>
@@ -250,7 +250,7 @@ function Sidebar() {
                 >
                   <FolderGit2
                     strokeWidth={1.5}
-                    className="w-[16px] h-[16px] stroke-current"
+                    className="w-4 h-4 stroke-current"
                   />
                   <p className="text-sm">Projects</p>
                 </NavLink>
@@ -266,7 +266,7 @@ function Sidebar() {
                 >
                   <Award
                     strokeWidth={1.5}
-                    className="w-[16px] h-[16px] stroke-current"
+                    className="w-4 h-4 stroke-current"
                   />
                   <p className="text-sm">Achievements</p>
                 </NavLink>
@@ -282,7 +282,7 @@ function Sidebar() {
                 >
                   <BookOpen
                     strokeWidth={1.5}
-                    className="w-[16px] h-[16px] stroke-current"
+                    className="w-4 h-4 stroke-current"
                   />
                   <p className="text-sm">Blog</p>
                 </NavLink>
@@ -345,7 +345,7 @@ function Sidebar() {
               }
             >
               <div className="flex items-center gap-2">
-                <Download strokeWidth={1.75} className="w-[16px]" />
+                <Download strokeWidth={1.75} className="w-4" />
                 <span>Resume</span>
               </div>
             </NavLink>
@@ -361,7 +361,7 @@ function Sidebar() {
                             : "flex  items-center gap-2.5 py-3  pl-3  cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <House strokeWidth={1.5} className="w-[20px] stroke-current" />
+              <House strokeWidth={1.5} className="w-5 stroke-current" />
               <p>Home</p>
             </NavLink>
             <NavLink
@@ -373,7 +373,7 @@ function Sidebar() {
                             : "flex  pl-3 items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <User strokeWidth={1.5} className="w-[20px] stroke-current" />
+              <User strokeWidth={1.5} className="w-5 stroke-current" />
               <p>About</p>
             </NavLink>
             <NavLink
@@ -387,7 +387,7 @@ function Sidebar() {
             >
               <FolderGit2
                 strokeWidth={1.5}
-                className="w-[20px] stroke-current"
+                className="w-5 stroke-current"
               />
               <p>Projects</p>
             </NavLink>
@@ -400,7 +400,7 @@ function Sidebar() {
                             : "flex  pl-3  items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <Award strokeWidth={1.5} className="w-[20px] stroke-current" />
+              <Award strokeWidth={1.5} className="w-5 stroke-current" />
               <p>Achievements</p>
             </NavLink>
             <NavLink
@@ -412,7 +412,7 @@ function Sidebar() {
                             : "flex  pl-3  items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <BookOpen strokeWidth={1.5} className="w-[20px] stroke-current" />
+              <BookOpen strokeWidth={1.5} className="w-5 stroke-current" />
               <p>Blog</p>
             </NavLink>
           </div>
