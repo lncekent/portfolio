@@ -140,7 +140,7 @@ function AboutContent() {
       <div className="w-full flex flex-col bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent rounded-[14px] shrink-0 overflow-hidden relative group select-none">
         <div className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform w-full relative h-70 sm:h-75 lg:h-64">
           <video
-            src="https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto:best,f_auto,w_1280,vc_auto/v1775295681/lightmode-cover_lmrfig.mp4"
+            src="https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto:best,f_auto,w_1280,vc_auto/v1779602558/lightmode-banner_gcmym1.mp4"
             autoPlay
             loop
             muted
@@ -149,7 +149,7 @@ function AboutContent() {
             className="w-full h-full object-cover dark:hidden"
           />
           <video
-            src="https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto:best,f_auto,w_1280,vc_auto/v1775295646/darkmode-cover_bmgsuh.mp4"
+            src="https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto:best,f_auto,w_1280,vc_auto/v1779602238/darkmode-banner_fr1voe.mp4"
             autoPlay
             loop
             muted
