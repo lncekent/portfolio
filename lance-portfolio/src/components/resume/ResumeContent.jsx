@@ -22,7 +22,7 @@ function ResumeContent() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const initialScale = windowWidth < 1024 ? 0.45 : 1.0;
+  const initialScale = windowWidth < 1024 ? 0.45 : 1.25;
 
   const [scale, setScale] = useState(initialScale);
 
@@ -54,10 +54,10 @@ function ResumeContent() {
           className="w-full relative gap-4 "
         >
           <div className="absolute lg:top-5 top-4 right-4.5 z-10 hidden sm:block">
-            <Skeleton className="w-[124px] h-[46px] rounded-sm" />
+            <Skeleton className="w-31 h-11.5 rounded-sm" />
           </div>
           <div className="relative w-full h-125 mt-3 lg:h-auto rounded-[10px] border border-gray-200 overflow-hidden bg-[#1a1a1a] flex justify-center py-10 px-5">
-            <Skeleton className="w-[80%] h-full min-h-[500px]" />
+            <Skeleton className="w-[80%] h-full min-h-125" />
           </div>
         </BentoCard>
 
@@ -104,7 +104,7 @@ function ResumeContent() {
           >
             <Download
               strokeWidth={1.5}
-              className="stroke-zinc-900 group-hover:stroke-zinc-900 w-[18px] h-[18px]"
+              className="stroke-zinc-900 group-hover:stroke-zinc-900 w-4.5 h-4.5"
             />
             <span>Download</span>
           </a>

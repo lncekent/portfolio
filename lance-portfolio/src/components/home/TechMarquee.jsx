@@ -19,7 +19,7 @@ const SkillsCards = ({
         <TooltipTrigger asChild >    
           <figure
             className={cn(
-              "relative h-full cursor-pointer overflow-hidden py-4 px-3",
+              "relative h-full overflow-hidden py-4 px-3",
             )}
           >
             <div className="flex flex-row items-center">

@@ -818,7 +818,7 @@ export const projectsData = [
   {
     id: 3,
     slug: "my-portfolio",
-    title: "My Portfolio",
+    title: "Lance Kent",
     date: "April 5, 2026",
     description:
       "A modern, highly interactive personal portfolio designed to showcase my software development projects, technical skills, and academic journey.",

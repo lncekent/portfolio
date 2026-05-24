@@ -50,7 +50,7 @@ function BlogSelectedContent() {
               </div>
             </div>
             <div className="w-full pt-6">
-              <Skeleton className="w-full rounded-[10px] aspect-[16/9]" />
+              <Skeleton className="w-full rounded-[10px] aspect-video" />
             </div>
             <div className="flex flex-col w-full gap-4 pt-6">
               <Skeleton className="h-4 w-full" />

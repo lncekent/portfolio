@@ -30,7 +30,7 @@ function SubContent() {
     return (
       <div className="w-full flex flex-col gap-3 lg:overflow-y-auto lg:no-scrollbar lg:py-3 lg:pr-3 select-none px-3 lg:px-0">
         <BentoCard title="Technologies" icon={<Cpu className="stroke-black" />}>
-          <div className="flex flex-col gap-3 overflow-hidden h-[116px]">
+          <div className="flex flex-col gap-3 overflow-hidden h-29">
             <Skeleton className="w-full h-11 rounded-md" />
             <Skeleton className="w-full h-11 rounded-md" />
           </div>
