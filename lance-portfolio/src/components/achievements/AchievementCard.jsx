@@ -44,7 +44,7 @@ function AchievementCard({ data, list, variant = "card" }) {
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none"></div>
               <div className="absolute bottom-3 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex items-center gap-1.5 text-white z-10">
-                <ExternalLink strokeWidth={2} className="w-[15px] h-[15px]" />
+                <ExternalLink strokeWidth={2} className="w-3.75 h-3.75" />
                 <span className="text-[13px] font-medium tracking-wide">
                   View Certificate
                 </span>
@@ -104,7 +104,7 @@ function AchievementCard({ data, list, variant = "card" }) {
               <DialogTrigger asChild>
                 <button className="w-fit flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-[14px] font-semibold text-zinc-700 dark:text-zinc-200 cursor-pointer">
                   <span>View Certificate</span>
-                  <ExternalLink strokeWidth={2} className="w-[15px] h-[15px]" />
+                  <ExternalLink strokeWidth={2} className="w-3.75 h-3.75" />
                 </button>
               </DialogTrigger>
             </div>
@@ -138,7 +138,7 @@ function AchievementCard({ data, list, variant = "card" }) {
                 {currentData.linkText || "Verify Credential"}
                 <ArrowRight
                   strokeWidth={2}
-                  className="w-[15px] h-[15px] transition-transform duration-200 group-hover:translate-x-1"
+                  className="w-3.75 h-3.75 transition-transform duration-200 group-hover:translate-x-1"
                 />
               </a>
             </div>
@@ -190,12 +190,9 @@ function AchievementCard({ data, list, variant = "card" }) {
                   <button
                     onClick={handlePrev}
                     disabled={currentIndex === 0}
-                    className="flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none"
+                    className="flex items-center gap-2 cursor-pointer text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none"
                   >
-                    <ChevronLeft
-                      strokeWidth={2}
-                      className="w-[15px] h-[15px]"
-                    />
+                    <ChevronLeft strokeWidth={2} className="w-3.75 h-3.75" />
                     Previous
                   </button>
 
@@ -206,13 +203,10 @@ function AchievementCard({ data, list, variant = "card" }) {
                   <button
                     onClick={handleNext}
                     disabled={currentIndex === list.length - 1}
-                    className="flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none"
+                    className="flex items-center gap-2 cursor-pointer text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none"
                   >
                     Next
-                    <ChevronRight
-                      strokeWidth={2}
-                      className="w-[15px] h-[15px]"
-                    />
+                    <ChevronRight strokeWidth={2} className="w-3.75 h-3.75" />
                   </button>
                 </div>
               )}
