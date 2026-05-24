@@ -701,7 +701,7 @@ export const projectsData = [
     description:
       "An AI-driven mobile application capable of identifying plant diseases and providing actionable organic treatment recommendations.",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779533347/PlantCam_Thumbnail_xtcxgj.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779609817/PlantCam_Thumbnail_tduib7.png",
     status: "Public",
     role: "Full-Stack Developer",
     type: "Academic Project",
@@ -763,7 +763,7 @@ export const projectsData = [
     description:
       "A barangay management system designed to digitalize local government operations, resident records, and document requests.",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779608889/BIRIMS-Thumbnail_i32t1h.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779611017/BIRIMS_Thumbnail_1_ynh3ik.png",
     status: "Public",
 
     role: "System Analyst & Front-End Developer",
@@ -823,7 +823,7 @@ export const projectsData = [
     description:
       "A modern, highly interactive personal portfolio designed to showcase my software development projects, technical skills, and academic journey.",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779606213/Portfolio-Thumbnail_sxquwg.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779609604/Portfolio_Thumbnail_pw6k76.png",
     status: "Public",
 
     role: "Front-End Developer & UI/UX Designer",
