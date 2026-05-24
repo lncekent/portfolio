@@ -89,7 +89,7 @@ function AchievementsContent() {
   }
 
   return (
-    <div className="py-3 px-3 lg:px-0 lg:pr-3 overflow-y-auto flex-col gap-3 no-scrollbar overflow-hidden w-full flex ">
+    <div className="py-3 px-3 lg:px-0 lg:pr-3 overflow-y-scroll flex-col gap-3 no-scrollbar w-full flex  min-w-0 [scrollbar-gutter:stable]">
       <BentoCard
         title={"Technical Certifications"}
         icon={<Award className="stroke-black" />}

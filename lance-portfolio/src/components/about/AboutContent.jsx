@@ -54,7 +54,7 @@ function AboutContent() {
 
   if (isLoading) {
     return (
-      <div className="overflow-y-auto py-3 w-full gap-3 flex flex-col no-scrollbar select-none min-h-[101vh]">
+      <div className="overflow-y-auto py-3 w-full gap-3 flex flex-col no-scrollbar select-none min-h-[101vh] ">
         {/* Hero Banner Skeleton */}
         <div className="w-full flex flex-col rounded-[14px] shrink-0 overflow-hidden relative group select-none">
           <Skeleton className="w-full absolute inset-0 z-0 rounded-none " />
@@ -136,7 +136,7 @@ function AboutContent() {
   }
 
   return (
-    <div className="overflow-y-auto py-3 w-full gap-3 flex flex-col no-scrollbar">
+    <div className=" py-3 w-full gap-3 flex flex-col no-scrollbar lg:overflow-y-auto select-none">
       <div className="w-full flex flex-col bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent rounded-[14px] shrink-0 overflow-hidden relative group select-none">
         <div className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform w-full relative h-70 sm:h-75 lg:h-64">
           <video
