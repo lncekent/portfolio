@@ -763,7 +763,7 @@ export const projectsData = [
     description:
       "A barangay management system designed to digitalize local government operations, resident records, and document requests.",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1775301541/birims-thumbnail_pw9fv4.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779608889/BIRIMS-Thumbnail_i32t1h.png",
     status: "Public",
 
     role: "System Analyst & Front-End Developer",
@@ -823,7 +823,7 @@ export const projectsData = [
     description:
       "A modern, highly interactive personal portfolio designed to showcase my software development projects, technical skills, and academic journey.",
     thumbnail:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1775301723/portfolio-thumbnail_kplfvn.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto,w_1290/v1779606213/Portfolio-Thumbnail_sxquwg.png",
     status: "Public",
 
     role: "Front-End Developer & UI/UX Designer",
