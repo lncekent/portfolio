@@ -724,10 +724,9 @@ export const projectsData = [
         "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779539894/Screenshot_2026-05-23_203756_qylbqz.png",
       ],
       gallery: [
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301177/bakehub-dashboard_ziaekf.png",
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301173/bakehub-cart_ld0dyz.png",
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301188/bakehub-menu_l4qopa.png",
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301388/bakehub-mobile_aqqiyd.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779619151/Screenshot_2026-05-24_183814_dmgilw.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779619151/Screenshot_2026-05-24_183828_frngv8.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779619154/Screenshot_2026-05-24_183843_l6li8c.png",
       ],
       overview:
         "PlantCam is an AI-powered mobile application designed for real-time plant disease diagnosis and smart treatment recommendations. Built with an MIT App Inventor and WebViewer frontend, the system relies on a custom machine learning model trained via Google Colab. Utilizing a Kaggle dataset of 18,000 images, the AI focuses on identifying diseases in solanaceous crops (potato, tomato, and pepper). To support the application, a dedicated promotional website was also developed for product marketing, highlighting the app's functionality, data transparency, and legal documentation.",
@@ -788,9 +787,9 @@ export const projectsData = [
         "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301530/birims-home_ql52ek.png",
       ],
       gallery: [
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301519/birims-admin_xderu7.png",
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301524/birims-blotter_nkflku.png",
-        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301546/birims-user_mnctib.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779618573/birims-admin_xderu7.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779618633/birims-blotter_nkflku.png",
+        "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1779618703/birims-user_mnctib.png",
         "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775301535/birims-medical_fxskja.png",
       ],
       overview:
