@@ -275,7 +275,7 @@ function Sidebar() {
                     strokeWidth={1.5}
                     className="w-4 h-4 stroke-current"
                   />
-                  <p className="text-sm">Blog</p>
+                  <p className="text-sm">Blogs</p>
                 </NavLink>
               </div>
             </div>
@@ -401,7 +401,7 @@ function Sidebar() {
                         }`}
             >
               <BookOpen strokeWidth={1.5} className="w-5 stroke-current" />
-              <p>Blog</p>
+              <p>Blogs</p>
             </NavLink>
           </div>
           <div className="border border-border my-3"></div>
