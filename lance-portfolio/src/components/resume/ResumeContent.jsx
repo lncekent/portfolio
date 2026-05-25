@@ -56,7 +56,7 @@ function ResumeContent() {
           <div className="absolute lg:top-5 top-4 right-4.5 z-10 hidden sm:block">
             <Skeleton className="w-31 h-11.5 rounded-sm" />
           </div>
-          <div className="relative w-full h-125 mt-3 lg:h-auto rounded-[10px] border border-gray-200 overflow-hidden bg-[#1a1a1a] flex justify-center py-10 px-5">
+          <div className="relative w-full h-125 mt-3 lg:h-auto rounded-[10px] overflow-hidden bg-[#1a1a1a] flex justify-center py-10 px-5">
             <Skeleton className="w-[80%] h-full min-h-125" />
           </div>
         </BentoCard>

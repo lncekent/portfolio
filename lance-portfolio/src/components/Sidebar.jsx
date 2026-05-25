@@ -216,10 +216,7 @@ function Sidebar() {
                             : "flex pl-3 items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
                 >
-                  <House
-                    strokeWidth={1.5}
-                    className="w-4 h-4 stroke-current"
-                  />
+                  <House strokeWidth={1.5} className="w-4 h-4 stroke-current" />
                   <p className="text-sm">Home</p>
                 </NavLink>
                 <NavLink
@@ -232,10 +229,7 @@ function Sidebar() {
                             : "flex pl-3 items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
                 >
-                  <User
-                    strokeWidth={1.5}
-                    className="w-4 h-4 stroke-current"
-                  />
+                  <User strokeWidth={1.5} className="w-4 h-4 stroke-current" />
                   <p className="text-sm">About</p>
                 </NavLink>
                 <NavLink
@@ -264,10 +258,7 @@ function Sidebar() {
                             : "flex pl-3 items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
                 >
-                  <Award
-                    strokeWidth={1.5}
-                    className="w-4 h-4 stroke-current"
-                  />
+                  <Award strokeWidth={1.5} className="w-4 h-4 stroke-current" />
                   <p className="text-sm">Achievements</p>
                 </NavLink>
                 <NavLink
@@ -339,7 +330,7 @@ function Sidebar() {
                 cn(
                   "py-2 rounded-[10px] flex gap-2.5 justify-center cursor-pointer text-[15px] ease-in transition-all duration-75 dark:text-white border",
                   isActive
-                    ? "text-[#3FA6F4] hover:text-[#3FA6F4] dark:border-[#3FA6F4] border-[#3FA6F4] stroke-[#3FA6F4] hover:bg-white dark:text-[#3FA6F4]"
+                    ? "text-[#3FA6F4] hover:text-[#7ac0f5] hover:border-[#7ac0f5] dark:hover:text-[#3FA6F4] dark:border-[#3FA6F4] border-[#3FA6F4] dark:stroke-[#3FA6F4] hover:bg-white dark:text-[#3FA6F4] dark:hover:bg-secondary"
                     : "text-[#00000080] bg-card border-border stroke-[#00000060] hover:text-[#7abdf0] hover:border-[#7abdf0] dark:stroke-white  hover:stroke-[#7abdf0] ",
                 )
               }
@@ -385,10 +376,7 @@ function Sidebar() {
                             : "flex  pl-3 items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <FolderGit2
-                strokeWidth={1.5}
-                className="w-5 stroke-current"
-              />
+              <FolderGit2 strokeWidth={1.5} className="w-5 stroke-current" />
               <p>Projects</p>
             </NavLink>
             <NavLink
