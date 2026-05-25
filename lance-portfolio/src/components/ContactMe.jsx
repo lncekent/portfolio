@@ -14,7 +14,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
           className={`flex flex-col justify-between gap-10 h-full ${wrapperClass}`}
         >
           <ul className="flex gap-4 w-full flex-wrap">
-            <li className="w-9">
+            <li className="lg:w-9 w-8">
               <a
                 href="https://github.com/lncekent"
                 target="_blank"
@@ -27,7 +27,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
                 />
               </a>
             </li>
-            <li className="w-9">
+            <li className="lg:w-9 w-8">
               <a
                 href="https://www.facebook.com/lance.kent.geoffrey/"
                 target="_blank"
@@ -40,7 +40,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
                 />
               </a>
             </li>
-            <li className="w-9">
+            <li className="lg:w-9 w-8">
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=lancemagollado46@gmail.com&su=Hi,%20Let%20us%20connect!"
                 target="_blank"
@@ -53,7 +53,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
                 />
               </a>
             </li>
-            <li className="w-9">
+            <li className="lg:w-9 w-8">
               <a
                 href="viber://chat?number=%2B639263226163"
                 target="_blank"
@@ -66,7 +66,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
                 />
               </a>
             </li>
-            <li className="w-9">
+            <li className="lg:w-9 w-8">
               <a
                 href="https://www.instagram.com/lncekent/"
                 target="_blank"
@@ -79,7 +79,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
                 />
               </a>
             </li>
-            <li className="w-9">
+            <li className="lg:w-9 w-8">
               <a
                 href="https://www.linkedin.com/in/lancemagollado/"
                 target="_blank"
@@ -92,7 +92,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
                 />
               </a>
             </li>
-            <li className="w-9">
+            <li className="lg:w-9 w-8">
               <a
                 href="https://api.whatsapp.com/send?phone=639263226163&text=Hi%20Lance!%20I%20saw%20your%20portfolio"
                 target="_blank"

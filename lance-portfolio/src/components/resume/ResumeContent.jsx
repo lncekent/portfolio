@@ -110,7 +110,7 @@ function ResumeContent() {
           </a>
         </button>
 
-        <div className="animate-in fade-in duration-700 delay-300 fill-mode-backwards relative w-full h-125 mt-3 lg:h-auto rounded-[10px] border border-gray-200 overflow-hidden bg-[#1a1a1a]">
+        <div className="animate-in fade-in duration-700 delay-300 fill-mode-backwards relative w-full h-125 mt-3 lg:h-auto rounded-[10px] overflow-hidden bg-[#1a1a1a]">
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
             <Button
               variant="secondary"
