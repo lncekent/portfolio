@@ -93,20 +93,20 @@ function ResumeContent() {
       >
         <button
           className={
-            "animate-in fade-in duration-700 delay-300 fill-mode-backwards absolute top-4 right-4.5 cursor-pointer lg:text-[16px] text-sm  text-zinc-900 z-10 stroke-black group"
+            "animate-in fade-in duration-700 delay-300 fill-mode-backwards absolute top-3.5 right-4.5 cursor-pointer lg:text-[16px] text-sm  text-zinc-900 z-10 stroke-black group"
           }
           asChild
         >
           <a
             href="/Magollado-Lance-Kent-Geoffrey-Resume.pdf"
             download={"Lance_Kent_Geoffrey_B_Magollado_Resume.pdf"}
-            className="flex gap-2 items-center py-3 px-3 rounded-sm lg:py-2 lg:px-4 border hover:bg-zinc-200 dark:bg-white  transition duration-300 ease-out"
+            className="flex gap-2 items-center py-1 px-2 rounded-sm lg:py-2 lg:px-4 border hover:bg-zinc-200 dark:bg-white  transition duration-300 ease-out"
           >
             <Download
               strokeWidth={1.5}
-              className="stroke-zinc-900 group-hover:stroke-zinc-900 w-4.5 h-4.5"
+              className="stroke-zinc-900 group-hover:stroke-zinc-900 w-4.5 "
             />
-            <span>Download</span>
+            <span className="lg:block hidden">Download</span>
           </a>
         </button>
 
