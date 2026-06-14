@@ -30,7 +30,7 @@ function AchievementsContent() {
 
   if (isLoading) {
     return (
-      <div className="w-full flex flex-col gap-3 lg:p-0 p-3 lg:overflow-y-auto lg:no-scrollbar lg:py-3 select-none min-h-[101vh]">
+      <div className="w-full flex flex-col gap-3 p-3 lg:overflow-y-auto lg:no-scrollbar lg:py-3 select-none min-h-[101vh]">
         <BentoCard
           title={"Technical Certifications"}
           icon={<Award className="stroke-black" />}
