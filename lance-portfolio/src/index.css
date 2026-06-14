@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @import "tailwindcss";
@@ -11,7 +11,6 @@
 
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -147,10 +146,82 @@
   --semitext-ring: oklch(0.556 0 0);
 }
 
+/* Custom chatbot tooltip pointer tail border */
+.rcb-chat-tooltip-tail {
+  border-left-color: var(
+    --border
+  ) !important; /* Outer triangle colored like your card border */
+}
+
+.rcb-chat-tooltip-tail::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -10px;
+  border-width: 9px 0 9px 9px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--card) !important; /* Inner triangle matches the tooltip background */
+}
+.rcb-chat-header {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+}
+.rcb-notification-icon,
+.rcb-close-chat-icon {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.rcb-chat-header > div:not(.rcb-bot-avatar) {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+.rcb-chat-header-container > .rcb-chat-header:nth-child(2) {
+  display: flex !important;
+  gap: 4px !important;
+}
+
+.rcb-chat-header-container > .rcb-chat-header:nth-child(2) > div {
+  display: flex;
+  align-items: center;
+}
+
+.rcb-view-chat-icon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: #0000001a;
+  border-radius: 50%;
+  opacity: 0;
+  transition:
+    width 0.2s ease-out,
+    height 0.2s ease-out,
+    opacity 0.2s ease-out;
+}
+
+.rcb-view-chat-icon:hover:after {
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+}
+
+/* When maximized, override the chatbot window dimensions and center it on screen */
+.chatbot-maximized .rcb-chat-window {
+  width: 80vw !important; /* Expands to 80% screen width */
+  height: 85vh !important; /* Expands to 85% screen height */
+  right: 10vw !important; /* Centers it horizontally */
+  bottom: 7.5vh !important; /* Centers it vertically */
+  border-radius: 16px !important; /* Sleek rounded corners */
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
-
   }
 
   body {
