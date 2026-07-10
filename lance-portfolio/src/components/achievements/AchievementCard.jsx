@@ -69,7 +69,7 @@ function AchievementCard({ data, list, variant = "card" }) {
                   >
                     {data.title}
                   </h1>
-                  <p className="text-[14px] text-zinc-600 dark:text-zinc-400 font-medium mt-0.5">
+                  <p className="text-[14px] line-clamp-1 text-zinc-600 dark:text-zinc-400 font-medium mt-0.5">
                     {data.issuer}
                   </p>
                 </div>

@@ -36,9 +36,9 @@ export const achievementsData = [
     id: 3,
     category: "education",
     title: "Resource Speaker",
-    issuer: "Quezon City University",
+    issuer: "LESIT - Quezon City University",
     issuerLogo:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775297487/QCU-Logo_mbjxmz.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775358149/lesit-logo_rcpxg0.png",
     image:
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775297721/speaker-certificate_sdc2lp.png",
     date: "February 09, 2026",
@@ -51,7 +51,7 @@ export const achievementsData = [
     id: 4,
     category: "education",
     title: "Volunteer Trainer",
-    issuer: "Quezon City University",
+    issuer: "Quezon City University Extension Management Office",
     issuerLogo:
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775297487/QCU-Logo_mbjxmz.png",
     image:
@@ -66,9 +66,9 @@ export const achievementsData = [
     id: 5,
     category: "education",
     title: "Third Place Web Design Figma Contest",
-    issuer: "Quezon City University",
+    issuer: "LESIT - Quezon City University",
     issuerLogo:
-      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775297487/QCU-Logo_mbjxmz.png",
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775358149/lesit-logo_rcpxg0.png",
     image:
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775297717/nyx-project_vkefgp.jpg",
     date: "November 18, 2025",
@@ -91,6 +91,94 @@ export const achievementsData = [
     linkText: null,
     description:
       "Attended my first Youth Summit Leadership with different schools to promote leadership, security in digital realm, and society.",
+  },
+  {
+    id: 7,
+    category: "certification",
+    title: "AI Fundamentals Certification",
+    issuer: "DataCamp",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1783646766/datacamp-logo_hpycxy.png",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1781695356/ai-fundamentals_jhyntd.png",
+    date: "June 07, 2026",
+    verifyLink: "https://www.datacamp.com/skill-verification/DL0037352559648",
+    linkText: "Verify Credentials",
+    description:
+      "Learned the basics of different AI forms and significance.Adopted the fundamentals and door to begin my AI journey.",
+  },
+  {
+    id: 8,
+    category: "certification",
+    title: "Data Literacy Certification",
+    issuer: "DataCamp",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1783646766/datacamp-logo_hpycxy.png",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1781695299/data-literacy-certificate_lpp8pw.png",
+    date: "June 15, 2026",
+    verifyLink: "https://www.datacamp.com/skill-verification/DL0037352559648",
+    linkText: "Verify Credentials",
+    description:
+      "Bridging the gap between data and decision-making, one insight at a time. Gained the confidence to unlock the fundamentals and  story behind the numbers.",
+  },
+  {
+    id: 9,
+    category: "education",
+    title: "Event Volunteer Staff",
+    issuer: "LESIT - Quezon City University",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775358149/lesit-logo_rcpxg0.png",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1781695016/Screenshot_2026-06-17_191417_lznr1a.png",
+    date: "December 19, 2025",
+    verifyLink: null,
+    linkText: null,
+    description: (
+      <p>
+        A privilege to be part of the event as a volunteer usherette during the{" "}
+        <i>2025 IT SUMMIT</i> organized by League of Excellent Students in
+        Information Technology.
+      </p>
+    ),
+  },
+  {
+    id: 10,
+    category: "education",
+    title: "Organizations Certificate of Appreciation",
+    issuer: "LESIT - Quezon City University",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775358149/lesit-logo_rcpxg0.png",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1781694531/lesit_jfibbo.png",
+    date: "May 15, 2026",
+    verifyLink: null,
+    linkText: null,
+    description: (
+      <p>
+        An appreciation certificate showcasing our hard work and contribution as
+        an IT Student to the organization.
+      </p>
+    ),
+  },
+  {
+    id: 11,
+    category: "education",
+    title: "Top 3 DataCamp Learner",
+    issuer: "AWS Student Builder Group - Quezon City University",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1783650335/aws-logo_w97xmb.png",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1783649897/aws-datacamp_oxynq2.png",
+    date: "June 29, 2026",
+    verifyLink: "https://www.awscc-qcu.cloud/certificates/magollado",
+    linkText: "Verify Credential",
+    description: (
+      <p>
+        A milestone to be part of AWS Student Builder Group - QCU DataCamp
+        Scholar programmable and achieve Top 3 DataCamp Learner in June 2026.
+      </p>
+    ),
   },
 ];
 
@@ -174,6 +262,27 @@ export const techStackData = [
     id: 16,
     img: "/technology-icons/node.svg",
     skillName: "Node",
+  },
+  {
+    id: 17,
+    img: "/technology-icons/n8n.svg",
+    skillName: "n8n",
+  },
+  {
+    id: 18,
+    img: "/technology-icons/typescript.svg",
+    skillName: "TypeScript",
+  },
+  {
+    id: 19,
+    img: "/technology-icons/supabase.svg",
+    skillName: "Supabase",
+  },
+  {
+    id: 20,
+    img: "/technology-icons/vercel-icon-light.svg",
+    imgDark: "/technology-icons/vercel-icon-dark.svg",
+    skillName: "Vercel",
   },
 ];
 
@@ -1335,16 +1444,29 @@ export const educationData = [
 export const experienceData = [
   {
     id: 1,
-    logo: "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775297493/STUDYPOOL-LOGO_wkyfik.png",
-    role: "Programming Content Contributor",
-    company: "StudyPool Inc.",
-    type: "Online Platform",
-    date: "Jan 2026 - Present",
+    logo: "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1783662876/devcon_tbjkws.png",
+    role: "Frontend Developer",
+    company: "DEVCON Manila",
+    type: "Remote",
+    date: "July 2026 - Present",
     description:
-      "Created and published comprehensive technical content and programming solutions to assist students globally with complex programming concepts.",
+      "Started to become a Frontend Developer for DEVCON Manila - Technology Office. Assigned to develop and improve friendly UI Experience and helping engineering AI-ready tech ecosystem and building open-souce solutions for a non-profit tech organization.",
   },
-  {
+   {
     id: 2,
+    logo: "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1783663739/humain_ffnaqi.png",
+    role: "AI Engineer Intern",
+    company: "HumAIn HumanLed AIPowered",
+    type: "Remote",
+    date: "May 2026 - Present",
+    description:
+      "Assigned to work in AI Voice Chatbots using Gemini Live API. Configures AI Voice Agents that can effectively respond to users for voice calls and text based on the AI's character. Also assigned to improve the codebase, and add features to already existing AI Voice Agents.",
+  },
+];
+
+export const orgcomData = [
+  {
+    id: 1,
     logo: "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775358149/lesit-logo_rcpxg0.png",
     role: "Board of Governors",
     company: "League of Excellent Students in IT (LESIT)",
@@ -1353,4 +1475,4 @@ export const experienceData = [
     description:
       "Spearheaded the planning and execution of IT-centric activities and managed internal affairs. Served as a primary liaison officer to facilitate communication, resolve conflicts, and drive student engagement.",
   },
-];
+]
