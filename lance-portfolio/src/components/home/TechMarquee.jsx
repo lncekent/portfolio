@@ -6,14 +6,33 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { useState, useEffect } from "react"
 
 const firstRow = techStackData.slice(0, techStackData.length / 2)
 const secondRow = techStackData.slice(techStackData.length / 2)
 
 const SkillsCards = ({
   img,
+  imgDark,
   skillName
 }) => {
+  const [isDark, setIsDark] = useState(() =>
+    document.documentElement.classList.contains("dark")
+  );
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
+  const resolvedImg = imgDark && isDark ? imgDark : img;
+
   return (
     <Tooltip>
         <TooltipTrigger asChild >    
@@ -23,7 +42,7 @@ const SkillsCards = ({
             )}
           >
             <div className="flex flex-row items-center">
-              <img width="38" height="36" alt={skillName + "'s Logo"} src={img} />
+              <img width="38" height="36" alt={skillName + "'s Logo"} src={resolvedImg} />
             </div>
           </figure>
           </TooltipTrigger>
