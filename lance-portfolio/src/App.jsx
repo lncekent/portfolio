@@ -10,6 +10,7 @@ import Blog from './pages/Blog'
 import Resume from './pages/Resume'
 import BlogSelected from './pages/BlogSelected';
 import ProjectSelected from './pages/ProjectSelected';
+import NotFound from './pages/NotFound';
 import OfflineNotice from './components/OfflineNotice';
 import Preloader from './components/Preloader';
 import { TooltipProvider } from './components/ui/tooltip';
@@ -62,6 +63,7 @@ function App() {
           <Route path="/resume" element={<Resume/>} />
           <Route path="/blog-selected/:slug" element={<BlogSelected/>} />
           <Route path="/projects-selected/:slug" element={<ProjectSelected/>} />
+          <Route path='*' element={<NotFound />}/>
         </Routes>
         </div>
       </Router>
