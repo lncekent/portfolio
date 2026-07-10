@@ -33,6 +33,21 @@ function App() {
   }, []);
 
    useEffect(() => {
+    const path = window.location.pathname;
+    
+    // Check if path matches any valid static or dynamic routes
+    const validStaticRoutes = ['/', '/about', '/projects', '/achievements', '/blog', '/resume'];
+    const isValidRoute = 
+      validStaticRoutes.includes(path) || 
+      path.startsWith('/blog-selected/') || 
+      path.startsWith('/projects-selected/');
+
+    // If it's a 404 route, bypass the preloader screen
+    if (!isValidRoute) {
+      setIsLoading(false);
+      return;
+    }
+
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1500);
