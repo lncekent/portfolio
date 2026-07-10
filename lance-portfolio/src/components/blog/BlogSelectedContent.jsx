@@ -182,9 +182,9 @@ function BlogSelectedContent() {
         >
           {/* BACK BUTTON */}
           <button onClick={() => navigate(-1)}>
-            <div className="p-2 w-fit rounded-[100px] outline-1 outline-zinc-200  cursor-pointer dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:bg-zinc-900/50 transition-colors">
+            <span className="p-2 w-fit rounded-[100px] outline-1 outline-zinc-200  cursor-pointer dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:bg-zinc-900/50 transition-colors">
               <ChevronLeft strokeWidth={1.5} className="stroke-current" />
-            </div>
+            </span>
           </button>
 
           {/* HEADER */}

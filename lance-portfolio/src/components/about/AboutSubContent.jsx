@@ -166,7 +166,7 @@ function AboutSubContent() {
               <img
                 src={job.logo}
                 className="lg:w-13 lg:h-13 w-11 h-11"
-                alt={job.title + "'s Logo"}
+                alt={job.company + "'s Logo"}
               ></img>
               <div className="flex flex-col gap-1">
                 <div>
