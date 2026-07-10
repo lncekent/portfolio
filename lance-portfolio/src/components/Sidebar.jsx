@@ -134,7 +134,7 @@ function Sidebar() {
                 Lance Kent
               </h3>
               <h2 className="text-zinc-600 dark:text-zinc-400 font-light text-center text-[10px]">
-                Current 3rd Year IT Student
+                Current 4th Year IT Student
               </h2>
             </div>
           </Link>
@@ -185,7 +185,7 @@ function Sidebar() {
                   Lance Kent
                 </h3>
                 <h2 className="text-zinc-600 dark:text-zinc-400 text-center font-light text-[12px] pb-6 mt-0.5">
-                  Current 3rd Year IT Student
+                  Current 4th Year IT Student
                 </h2>
 
                 <NavLink
@@ -321,7 +321,7 @@ function Sidebar() {
               Lance Kent
             </h3>
             <h2 className="text-zinc-600 dark:text-zinc-400 text-center font-light text-[13px] pb-6 mt-0.5">
-              Current 3rd Year IT Student
+              Current 4th Year IT Student
             </h2>
 
             <NavLink
