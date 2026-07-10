@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @import "tailwindcss";
@@ -11,7 +9,6 @@
 
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -150,7 +147,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-
   }
 
   body {
