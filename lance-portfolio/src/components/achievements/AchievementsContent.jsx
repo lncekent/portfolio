@@ -26,11 +26,11 @@ function AchievementsContent() {
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, []);   
 
   if (isLoading) {
     return (
-      <div className="w-full flex flex-col gap-3 px-3 lg:pl-0 lg:overflow-y-auto lg:no-scrollbar lg:py-3 pt-3 select-none min-h-[101vh]">
+      <div className="w-full flex flex-col gap-3 px-3 lg:pl-0 lg:overflow-y-auto lg:no-scrollbar lg:py-3 pt-3 select-none min-h-[101vh] pb-3">
         <BentoCard
           title={"Technical Certifications"}
           icon={<Award className="stroke-black" />}
@@ -68,9 +68,8 @@ function AchievementsContent() {
         <BentoCard
           title="Contact Me"
           icon={<Phone className="stroke-black" />}
-          className="h-full"
         >
-          <div className="flex flex-col justify-between gap-10 h-full">
+          <div className="flex flex-col justify-between gap-10">
             <ul className="flex gap-4 w-full flex-wrap">
               {[1, 2, 3, 4, 5, 6, 7].map((i) => (
                 <li key={i} className="w-9 h-9">
