@@ -37,7 +37,7 @@ function NotFound() {
 
               {/* Button Skeletons */}
               <div className="flex items-center gap-3 justify-center mt-2">
-                <Skeleton className="h-[40px] w-28 rounded-[10px]" />
+                {/* <Skeleton className="h-[40px] w-28 rounded-[10px]" /> */}
                 <Skeleton className="h-[40px] w-36 rounded-[10px]" />
               </div>
             </div>
@@ -80,13 +80,13 @@ function NotFound() {
 
               {/* Action Buttons */}
               <div className="flex items-center gap-3 flex-wrap justify-center">
-                <button
+                {/* <button
                   onClick={() => navigate(-1)}
                   className="flex items-center gap-2 px-5 py-2.5 rounded-[10px] bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium text-[14px] transition-all duration-200 cursor-pointer"
                 >
                   <MoveLeft className="w-4 h-4" strokeWidth={1.75} />
                   Go Back
-                </button>
+                </button> */}
                 <Link
                   to="/"
                   className="flex items-center gap-2 px-5 py-2.5 rounded-[10px] bg-zinc-900 dark:bg-white hover:bg-zinc-700 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-medium text-[14px] transition-all duration-200"
