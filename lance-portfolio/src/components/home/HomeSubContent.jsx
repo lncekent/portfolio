@@ -53,7 +53,6 @@ function SubContent() {
         <BentoCard
           title="Contact Me"
           icon={<Phone className="stroke-black" />}
-          className="h-full"
         >
           <div className="flex flex-col justify-between gap-10 h-full">
             <ul className="flex gap-4 w-full flex-wrap">
