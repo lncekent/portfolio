@@ -191,7 +191,7 @@ export const achievementsData = [
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1784115414/github-certification_yrmy0s.png",
     date: "July 15, 2026",
     verifyLink: "https://learn.microsoft.com/api/credentials/share/en-us/LanceKentGeoffreyMagollado-6205/321B1E61C7BF0565?sharingId=A82CBDC6345D8E01",
-    linkText: "Verify Credential",
+    linkText: "Verify Credentials",
     description: (
       <p>
         Adopted the fundamental knowledge and team workflow using Git and GitHub. Crucial for team collaboration, system maintenance, and innovation.
