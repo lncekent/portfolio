@@ -180,6 +180,24 @@ export const achievementsData = [
       </p>
     ),
   },
+  {
+    id: 12,
+    category: "certification",
+    title: "GitHub Foundations",
+    issuer: "Microsoft",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1784115076/microsoft-svgrepo-com_kbcab4.png",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1784115414/github-certification_yrmy0s.png",
+    date: "July 15, 2026",
+    verifyLink: "https://learn.microsoft.com/api/credentials/share/en-us/LanceKentGeoffreyMagollado-6205/321B1E61C7BF0565?sharingId=A82CBDC6345D8E01",
+    linkText: "Verify Credential",
+    description: (
+      <p>
+        Adopted the fundamental knowledge and team workflow using Git and GitHub. Crucial for team collaboration, system maintenance, and innovation.
+      </p>
+    ),
+  },
 ];
 
 export const techStackData = [
@@ -1452,7 +1470,7 @@ export const experienceData = [
     description:
       "Started to become a Frontend Developer for DEVCON Manila - Technology Office. Assigned to develop and improve friendly UI Experience and helping engineering AI-ready tech ecosystem and building open-souce solutions for a non-profit tech organization.",
   },
-   {
+  {
     id: 2,
     logo: "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1783663739/humain_ffnaqi.png",
     role: "AI Engineer Intern",
@@ -1475,4 +1493,4 @@ export const orgcomData = [
     description:
       "Spearheaded the planning and execution of IT-centric activities and managed internal affairs. Served as a primary liaison officer to facilitate communication, resolve conflicts, and drive student engagement.",
   },
-]
+];
