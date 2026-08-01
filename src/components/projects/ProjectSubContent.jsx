@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import BentoCard from "../BentoCard";
 import ContactMe from "../ContactMe";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Skeleton } from "../ui/skeleton";
-import { FolderGit2, Phone, BookMarked } from "lucide-react";
+import { FolderGit2, Phone, BookMarked, GitGraph } from "lucide-react";
+import { GitHubCalendar } from "react-github-calendar";
 
 let isLoaded = false;
 
@@ -12,6 +13,78 @@ function ProjectSubContent({
   projectList = [],
   showViewAll = false,
 }) {
+  // Dark mode detection for calendar
+  const [isDark, setIsDark] = useState(
+    document.documentElement.classList.contains("dark"),
+  );
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    });
+    observer.observe(document.documentElement, { attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
+  // Calendar state
+  const [calendarStats, setCalendarStats] = useState(null);
+  const [isCalendarLoading, setIsCalendarLoading] = useState(true);
+  const statsComputedRef = useRef(false);
+  const calendarContainerRef = useRef(null);
+  const [blockSize, setBlockSize] = useState(12);
+
+  // Dynamically calculate blockSize so the calendar fills its container width
+  useEffect(() => {
+    const container = calendarContainerRef.current;
+    if (!container) return;
+
+    const calculateBlockSize = () => {
+      const containerWidth = container.clientWidth;
+      if (containerWidth <= 0) return;
+      const weeks = 53;
+      const blockMargin = 4;
+      const calculatedSize = Math.floor(
+        (containerWidth + blockMargin) / weeks - blockMargin,
+      );
+      const clamped = Math.max(10, Math.min(20, calculatedSize));
+      setBlockSize(clamped);
+    };
+
+    calculateBlockSize();
+
+    const resizeObserver = new ResizeObserver(calculateBlockSize);
+    resizeObserver.observe(container);
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  const handleTransformData = useCallback((data) => {
+    if (!statsComputedRef.current && data.length > 0) {
+      statsComputedRef.current = true;
+      Promise.resolve().then(() => {
+        const total = data.reduce((sum, d) => sum + d.count, 0);
+        const monthMap = {};
+        data.forEach((d) => {
+          if (d.count > 0) {
+            const key = d.date.slice(0, 7);
+            monthMap[key] = (monthMap[key] || 0) + d.count;
+          }
+        });
+        const sorted = Object.entries(monthMap).sort((a, b) => b[1] - a[1]);
+        const [bestKey, bestCount] = sorted[0] || [];
+        const bestMonth = bestKey
+          ? new Date(bestKey + "-01").toLocaleString("default", {
+              month: "long",
+              year: "numeric",
+            })
+          : "N/A";
+        setCalendarStats({ total, bestMonth, bestCount });
+        setIsCalendarLoading(false);
+      });
+    }
+    return data;
+  }, []);
+
+  // Page loading state
   const [isLoading, setIsLoading] = useState(!isLoaded);
 
   useEffect(() => {
@@ -27,6 +100,50 @@ function ProjectSubContent({
   if (isLoading) {
     return (
       <div className="grid gap-3">
+        <BentoCard
+          title={"Contributions"}
+          icon={<GitGraph className="stroke-black" />}
+          className="w-full"
+        >
+          <div className="overflow-x-auto no-scrollbar">
+            <div className="flex flex-row gap-4 min-w-max">
+              <div className="flex flex-col gap-1 shrink-0">
+                <div className="flex gap-6 mb-1">
+                  {[...Array(6)].map((_, i) => (
+                    <Skeleton key={i} className="h-3 w-8" />
+                  ))}
+                </div>
+                {[...Array(7)].map((_, row) => (
+                  <div key={row} className="flex gap-1">
+                    {[...Array(52)].map((_, col) => (
+                      <Skeleton
+                        key={col}
+                        className="w-3 h-3 rounded-[2px] shrink-0"
+                      />
+                    ))}
+                  </div>
+                ))}
+                <div className="flex justify-between items-center mt-2">
+                  <Skeleton className="h-3 w-44" />
+                  <Skeleton className="h-3 w-24" />
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 w-38.75 shrink-0">
+                <div className="flex flex-col gap-2 p-3 rounded-[10px] border border-zinc-200 dark:border-zinc-800">
+                  <Skeleton className="h-3 w-16" />
+                  <Skeleton className="h-7 w-20" />
+                  <Skeleton className="h-3 w-24" />
+                </div>
+                <div className="flex flex-col gap-2 p-3 rounded-[10px] border border-zinc-200 dark:border-zinc-800">
+                  <Skeleton className="h-3 w-20" />
+                  <Skeleton className="h-5 w-full" />
+                  <Skeleton className="h-3 w-24" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </BentoCard>
+
         <BentoCard
           title={"Other Projects"}
           icon={<FolderGit2 className="stroke-black" />}
@@ -82,6 +199,104 @@ function ProjectSubContent({
 
   return (
     <div className="grid gap-3">
+      {/* Contributions Calendar */}
+      <BentoCard
+        title={"Contributions"}
+        icon={<GitGraph className="stroke-black" />}
+        className="w-full"
+      >
+        <div
+          className={
+            isCalendarLoading
+              ? "hidden"
+              : "overflow-x-auto no-scrollbar animate-in fade-in duration-700 fill-mode-both transform-gpu will-change-transform"
+          }
+        >
+          <div className="flex flex-row gap-4 min-w-max">
+            {/* Calendar */}
+            <div
+              ref={calendarContainerRef}
+              className="calendar-wrapper min-w-0 shrink-0"
+            >
+              <GitHubCalendar
+                username="lncekent"
+                colorScheme={isDark ? "dark" : "light"}
+                transformData={handleTransformData}
+                blockSize={blockSize}
+              />
+            </div>
+
+            {/* Stats Panel */}
+            <div className="flex flex-col gap-3 w-38.75 shrink-0">
+              <div className="flex flex-col gap-1 p-3 rounded-[10px] bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800">
+                <span className="text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">
+                  This Year
+                </span>
+                <span className="text-[26px] font-bold text-zinc-900 dark:text-zinc-100 leading-none">
+                  {calendarStats?.total?.toLocaleString()}
+                </span>
+                <span className="text-[11px] text-zinc-400 dark:text-zinc-500">
+                  contributions
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-1 p-3 rounded-[10px] bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800">
+                <span className="text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">
+                  Most Active
+                </span>
+                <span className="text-[14px] font-semibold text-zinc-900 dark:text-zinc-100 leading-snug">
+                  {calendarStats?.bestMonth}
+                </span>
+                <span className="text-[11px] text-zinc-400 dark:text-zinc-500">
+                  {calendarStats?.bestCount?.toLocaleString()} contributions
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {isCalendarLoading && (
+          <div className="overflow-x-auto no-scrollbar">
+            <div className="flex flex-row gap-4 min-w-max">
+              <div className="flex flex-col gap-1 shrink-0">
+                <div className="flex gap-6 mb-1">
+                  {[...Array(6)].map((_, i) => (
+                    <Skeleton key={i} className="h-3 w-8" />
+                  ))}
+                </div>
+                {[...Array(7)].map((_, row) => (
+                  <div key={row} className="flex gap-1">
+                    {[...Array(52)].map((_, col) => (
+                      <Skeleton
+                        key={col}
+                        className="w-3 h-3 rounded-[2px] shrink-0"
+                      />
+                    ))}
+                  </div>
+                ))}
+                <div className="flex justify-between items-center mt-2">
+                  <Skeleton className="h-3 w-44" />
+                  <Skeleton className="h-3 w-24" />
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 w-38.75 shrink-0">
+                <div className="flex flex-col gap-2 p-3 rounded-[10px] border border-zinc-200 dark:border-zinc-800">
+                  <Skeleton className="h-3 w-16" />
+                  <Skeleton className="h-7 w-20" />
+                  <Skeleton className="h-3 w-24" />
+                </div>
+                <div className="flex flex-col gap-2 p-3 rounded-[10px] border border-zinc-200 dark:border-zinc-800">
+                  <Skeleton className="h-3 w-20" />
+                  <Skeleton className="h-5 w-full" />
+                  <Skeleton className="h-3 w-24" />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </BentoCard>
+
+      {/* Other Projects */}
       <BentoCard
         title={"Other Projects"}
         icon={<FolderGit2 className="stroke-black" />}
@@ -138,6 +353,8 @@ function ProjectSubContent({
           )}
         </div>
       </BentoCard>
+
+      {/* Contact Me */}
       <ContactMe
         animKey="psc-btn"
         wrapperClass="animate-in fade-in duration-700 delay-300 fill-mode-both transform-gpu will-change-transform"
