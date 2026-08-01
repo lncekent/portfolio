@@ -32,16 +32,16 @@ function ProjectsContent() {
           icon={<Pin className="stroke-black" />}
           className="w-full relative "
         >
-          <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
+          <div className="grid lg:grid-cols-3 grid-cols-1 gap-3">
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="w-full h-full flex flex-col bg-white dark:bg-zinc-900/50 rounded-[14px] border border-zinc-200 dark:border-zinc-800 transition-all duration-300 overflow-hidden cursor-pointer"
+                className="w-full h-full flex flex-col bg-white dark:bg-zinc-900/50 rounded-[10px] border border-zinc-200 dark:border-zinc-800 overflow-hidden"
               >
                 <div className="w-full aspect-video bg-zinc-100 dark:bg-zinc-800 overflow-hidden relative border-b border-zinc-100 dark:border-zinc-800 shrink-0">
                   <Skeleton className="w-full h-full rounded-none" />
                 </div>
-                <div className="flex flex-col flex-1 p-5 gap-1.5 justify-between">
+                <div className="flex flex-col flex-1 p-4 gap-1.5 justify-between">
                   <div className="flex flex-col gap-1.5 w-full">
                     <Skeleton className="h-5 w-3/4" />
                     <div className="flex items-center gap-1.5 mt-0.5">
@@ -53,7 +53,7 @@ function ProjectsContent() {
                       <Skeleton className="h-3 w-4/5" />
                     </div>
                   </div>
-                  <div className="mt-4 flex items-center gap-1">
+                  <div className="mt-3 flex items-center gap-1">
                     <Skeleton className="h-4 w-24" />
                   </div>
                 </div>
@@ -79,45 +79,41 @@ function ProjectsContent() {
       >
         <div
           key="feat-grid-m"
-          className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform grid lg:grid-cols-3 grid-cols-1 gap-5"
+          className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform grid lg:grid-cols-3 grid-cols-1 gap-3"
         >
           {featuredProjects.map((post) => (
             <Link
               key={post.id}
               to={`/projects-selected/${post.slug}`}
-              className="w-full h-full flex flex-col bg-white dark:bg-zinc-900/50 rounded-[14px] border border-zinc-200 dark:border-zinc-800 transition-all duration-300 overflow-hidden group cursor-pointer"
+              className="w-full h-full flex flex-col bg-white dark:bg-zinc-900/50 rounded-[10px] border border-zinc-200 dark:border-zinc-800 transition-all duration-300 overflow-hidden group cursor-pointer"
             >
               <div className="w-full aspect-video bg-zinc-100 dark:bg-zinc-800 overflow-hidden relative border-b border-zinc-100 dark:border-zinc-800 shrink-0">
                 <img
                   src={post.thumbnail}
                   alt={post.title + "'s Image"}
-
-                  //  No janking by the use of will-change, transform and backface
                   className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform transform-gpu backface-hidden"
                 />
               </div>
 
-              <div className="flex flex-col flex-1 p-5 gap-1.5 justify-between">
+              <div className="flex flex-col flex-1 p-4 gap-1.5 justify-between">
                 <div className="flex flex-col gap-1.5">
-                  <h1 className="font-bold text-zinc-900 dark:text-zinc-100 text-[18px] leading-snug line-clamp-1 tracking-tight">
+                  <h1 className="font-bold text-zinc-900 dark:text-zinc-100 text-[16px] leading-snug line-clamp-1 tracking-tight">
                     {post.title}
                   </h1>
 
-                  {/* Date Area */}
                   <div className="flex items-center gap-1.5 mt-0.5">
                     <Clock className="stroke-zinc-400 w-3.5" />
-                    <span className=" text-[12px]  text-zinc-500 dark:text-zinc-400 tracking-wide ">
+                    <span className="text-[11px] text-zinc-500 dark:text-zinc-400 tracking-wide">
                       {post.date}
                     </span>
                   </div>
-                  <p className="mt-2 text-[13px] leading-relaxed text-zinc-600 dark:text-zinc-400 font-light line-clamp-3">
+                  <p className="mt-1.5 text-[12px] leading-relaxed text-zinc-600 dark:text-zinc-400 font-light line-clamp-3">
                     {post.description}
                   </p>
                 </div>
 
-                {/* "Read More" subtle cue */}
-                <div className="mt-4 flex items-center gap-1 text-[#468cfc] transition-colors duration-300 group-hover:text-[#92bcff] ease-out">
-                  <span className="text-[13px] font-medium">View Project</span>
+                <div className="mt-3 flex items-center gap-1 text-[#468cfc] transition-colors duration-300 group-hover:text-[#92bcff] ease-out">
+                  <span className="text-[12px] font-medium">View Project</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
