@@ -50,10 +50,7 @@ function SubContent() {
           </div>
         </BentoCard>
 
-        <BentoCard
-          title="Contact Me"
-          icon={<Phone className="stroke-black" />}
-        >
+        <BentoCard title="Contact Me" icon={<Phone className="stroke-black" />}>
           <div className="flex flex-col justify-between gap-10 h-full">
             <ul className="flex gap-4 w-full flex-wrap">
               {[1, 2, 3, 4, 5, 6, 7].map((i) => (
@@ -73,7 +70,7 @@ function SubContent() {
   }
 
   return (
-    <div className="w-full flex flex-col gap-3 lg:overflow-y-auto lg:no-scrollbar lg:py-3 lg:pr-3 select-none px-3 lg:px-0">
+    <div className="w-full flex flex-col gap-[clamp(12px,0.85vw,4rem)] lg:overflow-y-auto lg:no-scrollbar lg:py-[clamp(12px,0.85vw,4rem)] lg:pr-[clamp(12px,0.85vw,4rem)] select-none px-3 lg:px-0">
       <BentoCard title="Technologies" icon={<Cpu className="stroke-black" />}>
         <div
           key="tech-m"
@@ -91,19 +88,26 @@ function SubContent() {
           key="skills-m"
           className="animate-in fade-in duration-700 delay-350 fill-mode-both transform-gpu will-change-transform"
         >
-          <Accordion type="single" collapsible defaultValue="item-1">
+          <Accordion
+            type="single"
+            collapsible
+            defaultValue="item-1"
+            className="flex flex-col gap-[clamp(0.25rem,0.5vw,2rem)]"
+          >
             {skillsData.map((skill) => (
               <AccordionItem key={skill.id} value={skill.id}>
-                <AccordionTrigger className="w-full flex items-center hover:no-underline rounded-lg  transition-colors">
-                  <div className="w-full flex items-center gap-3">
-                    <div className="shrink-0">{skill.icon}</div>
-                    <span className="font-medium lg:text-[16px] text-[15px] text-zinc-900 dark:text-zinc-100">
+                <AccordionTrigger className="w-full flex items-center hover:no-underline rounded-lg transition-colors py-[clamp(0.5rem,0.7vw,3rem)]">
+                  <div className="w-full flex items-center gap-[clamp(0.75rem,0.9vw,3rem)]">
+                    <div className="shrink-0 w-[clamp(2.5rem,3vw,10rem)] h-[clamp(2.5rem,3vw,10rem)] [&>svg]:w-full [&>svg]:h-full [&>img]:w-full [&>img]:h-full">
+                      {skill.icon}
+                    </div>
+                    <span className="font-medium text-[clamp(15px,1.1vw,5rem)] text-zinc-900 dark:text-zinc-100">
                       {skill.title}
                     </span>
                   </div>
                 </AccordionTrigger>
 
-                <AccordionContent className="text-zinc-600 dark:text-zinc-400 font-light leading-relaxed pb-4  lg:text-[14px] text-[13px]">
+                <AccordionContent className="text-zinc-600 dark:text-zinc-400 font-light leading-relaxed pb-[clamp(0.75rem,1vw,4rem)] text-[clamp(13px,1vw,5rem)]">
                   {skill.description}
                 </AccordionContent>
               </AccordionItem>
