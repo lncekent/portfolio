@@ -302,11 +302,11 @@ function Sidebar() {
         </div>
       </div>
 
-      <nav className="hidden lg:block max-h-screen w-[18%] bg-card rounded-[10px] p-4 my-3 ml-3 select-none">
+      <nav className="hidden lg:block max-h-screen w-[18%] bg-card rounded-[clamp(10px,0.7vw,3rem)] p-[clamp(1rem,1.1vw,4rem)] my-[clamp(12px,0.85vw,4rem)] ml-[clamp(12px,0.85vw,4rem)] select-none shrink-0">
         <div className="w-full flex flex-col h-full justify-between">
           <div className="w-full flex flex-col">
             <div className="w-full flex justify-center">
-              <div className="flex h-15 w-15 rounded-full overflow-hidden">
+              <div className="flex h-[clamp(3.75rem,4.5vw,12rem)] w-[clamp(3.75rem,4.5vw,12rem)] rounded-full overflow-hidden">
                 <img
                   src={
                     isDarkMode
@@ -317,10 +317,10 @@ function Sidebar() {
                 ></img>
               </div>
             </div>
-            <h3 className="text-center text-zinc-900 dark:text-zinc-100 text-[18px] font-semibold tracking-tight text-nowrap whitespace-nowrap text-ellipsis overflow-hidden w-full pt-3">
+            <h3 className="text-center text-zinc-900 dark:text-zinc-100 text-[clamp(18px,1.3vw,5rem)] font-semibold tracking-tight text-nowrap whitespace-nowrap text-ellipsis overflow-hidden w-full pt-[clamp(0.75rem,0.9vw,3rem)]">
               Lance Kent
             </h3>
-            <h2 className="text-zinc-600 dark:text-zinc-400 text-center font-light text-[13px] pb-6 mt-0.5">
+            <h2 className="text-zinc-600 dark:text-zinc-400 text-center font-light text-[clamp(13px,0.95vw,4rem)] pb-[clamp(1.5rem,1.8vw,6rem)] mt-0.5">
               Current 4th Year IT Student
             </h2>
 
@@ -328,31 +328,37 @@ function Sidebar() {
               to={"/resume"}
               className={({ isActive }) =>
                 cn(
-                  "py-2 rounded-[10px] flex gap-2.5 justify-center cursor-pointer text-[15px] ease-in transition-all duration-75 dark:text-white border",
+                  "py-[clamp(0.5rem,0.6vw,2.5rem)] rounded-[clamp(10px,0.7vw,3rem)] flex gap-[clamp(0.5rem,0.7vw,2.5rem)] justify-center cursor-pointer text-[clamp(15px,1.1vw,5rem)] ease-in transition-all duration-75 dark:text-white border",
                   isActive
                     ? "text-[#3FA6F4] hover:text-[#7ac0f5] hover:border-[#7ac0f5] dark:hover:text-[#3FA6F4] dark:border-[#3FA6F4] border-[#3FA6F4] dark:stroke-[#3FA6F4] hover:bg-white dark:text-[#3FA6F4] dark:hover:bg-secondary"
                     : "text-[#00000080] bg-card border-border stroke-[#00000060] hover:text-[#7abdf0] hover:border-[#7abdf0] dark:stroke-white  hover:stroke-[#7abdf0] ",
                 )
               }
             >
-              <div className="flex items-center gap-2">
-                <Download strokeWidth={1.75} className="w-4" />
+              <div className="flex items-center gap-[clamp(0.375rem,0.5vw,2rem)]">
+                <Download
+                  strokeWidth={1.75}
+                  className="w-[clamp(1rem,1.2vw,4rem)] h-auto"
+                />
                 <span>Resume</span>
               </div>
             </NavLink>
           </div>
-          <div className="border border-border mt-6 mb-3"></div>
+          <div className="border border-border mt-[clamp(1.5rem,1.8vw,6rem)] mb-[clamp(0.75rem,0.9vw,3rem)]"></div>
           <div>
             <NavLink
               to="/"
               className={({ isActive }) => ` 
                         ${
                           isActive
-                            ? "flex items-center gap-2.5 py-3 pl-3 cursor-pointer text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
-                            : "flex  items-center gap-2.5 py-3  pl-3  cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
+                            ? "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
+                            : "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <House strokeWidth={1.5} className="w-5 stroke-current" />
+              <House
+                strokeWidth={1.5}
+                className="w-[clamp(1.25rem,1.4vw,5rem)] h-auto stroke-current"
+              />
               <p>Home</p>
             </NavLink>
             <NavLink
@@ -360,11 +366,14 @@ function Sidebar() {
               className={({ isActive }) => ` 
                         ${
                           isActive
-                            ? "flex items-center  pl-3  gap-2.5 py-3 cursor-pointer text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
-                            : "flex  pl-3 items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
+                            ? "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
+                            : "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <User strokeWidth={1.5} className="w-5 stroke-current" />
+              <User
+                strokeWidth={1.5}
+                className="w-[clamp(1.25rem,1.4vw,5rem)] h-auto stroke-current"
+              />
               <p>About</p>
             </NavLink>
             <NavLink
@@ -372,11 +381,14 @@ function Sidebar() {
               className={({ isActive }) => ` 
                         ${
                           isProjectLocation
-                            ? "flex  pl-3  items-center gap-2.5 py-3 cursor-pointer text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
-                            : "flex  pl-3 items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
+                            ? "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
+                            : "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <FolderGit2 strokeWidth={1.5} className="w-5 stroke-current" />
+              <FolderGit2
+                strokeWidth={1.5}
+                className="w-[clamp(1.25rem,1.4vw,5rem)] h-auto stroke-current"
+              />
               <p>Projects</p>
             </NavLink>
             <NavLink
@@ -384,11 +396,14 @@ function Sidebar() {
               className={({ isActive }) => ` 
                         ${
                           isActive
-                            ? "flex  pl-3  items-center gap-2.5 py-3 cursor-pointer text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
-                            : "flex  pl-3  items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
+                            ? "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
+                            : "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <Award strokeWidth={1.5} className="w-5 stroke-current" />
+              <Award
+                strokeWidth={1.5}
+                className="w-[clamp(1.25rem,1.4vw,5rem)] h-auto stroke-current"
+              />
               <p>Achievements</p>
             </NavLink>
             <NavLink
@@ -396,31 +411,36 @@ function Sidebar() {
               className={() => ` 
                         ${
                           isBlogActive
-                            ? "flex  pl-3  items-center gap-2.5 py-3 cursor-pointer text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
-                            : "flex  pl-3  items-center gap-2.5 py-3 cursor-pointer text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
+                            ? "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-[#3FA6F4] hover:text-[#3FA6F4] ease-in stroke-[#3FA6F4] transition duration-75 bg-secondary"
+                            : "flex items-center gap-[clamp(0.5rem,0.7vw,2.5rem)] py-[clamp(0.75rem,0.9vw,3rem)] pl-[clamp(0.75rem,0.9vw,3rem)] cursor-pointer text-[clamp(1rem,1.1vw,4rem)] text-foreground hover:text-[#7abdf0] ease-in stroke-foreground transition duration-75 hover:stroke-[#7abdf0] bg-card hover:bg-secondary"
                         }`}
             >
-              <BookOpen strokeWidth={1.5} className="w-5 stroke-current" />
+              <BookOpen
+                strokeWidth={1.5}
+                className="w-[clamp(1.25rem,1.4vw,5rem)] h-auto stroke-current"
+              />
               <p>Blogs</p>
             </NavLink>
           </div>
-          <div className="border border-border my-3"></div>
+          <div className="border border-border my-[clamp(0.75rem,0.9vw,3rem)]"></div>
           <div className="w-full flex flex-col">
-            <div className="flex flex-row gap-2.5 items-center pl-3 my-3">
+            <div className="flex gap-[clamp(0.5rem,0.7vw,2.5rem)] items-center pl-[clamp(0.75rem,0.9vw,3rem)] my-[clamp(0.75rem,0.9vw,3rem)] w-full h-full">
               <Switch
-                className={"cursor-pointer"}
+                className={
+                  "cursor-pointer h-[clamp(1.15rem,1.3vw,5rem)]! w-[clamp(2rem,2.3vw,8rem)]! [&>span]:size-[clamp(0.9rem,1.1vw,4rem)]!"
+                }
                 checked={isDarkMode}
                 onCheckedChange={handleThemeToggle}
               />
-              <span className="text-black dark:text-white text-[16px]">
+              <span className="text-black dark:text-white text-[clamp(16px,1.1vw,5rem)]">
                 Dark Mode
               </span>
             </div>
-            <div className="mt-4">
-              <p className="text-zinc-600 dark:text-zinc-400 font-light text-xs text-nowrap overflow-hidden text-ellipsis">
+            <div className="mt-[clamp(1rem,1.2vw,4rem)]">
+              <p className="text-zinc-600 dark:text-zinc-400 font-light text-[clamp(12px,0.85vw,4rem)] leading-relaxed line-clamp-1">
                 Designed and Built By Lance Kent Geoffrey B. Magollado
               </p>
-              <p className="text-zinc-600 dark:text-zinc-400 font-light text-xs text-nowrap overflow-hidden text-ellipsis">
+              <p className="text-zinc-600 dark:text-zinc-400 font-light text-[clamp(12px,0.85vw,4rem)] leading-relaxed">
                 @2025 All Rights Reserved.
               </p>
             </div>

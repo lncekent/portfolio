@@ -164,9 +164,9 @@
 }
 
 /* Responsive scaling: scale the entire UI proportionally on wide viewports (zoom out) */
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
   #root {
-    zoom: calc(100vw / 1600);
+    zoom: calc(100vw / 1440);
   }
 }
 
