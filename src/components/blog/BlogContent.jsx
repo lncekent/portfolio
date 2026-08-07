@@ -70,11 +70,11 @@ function BlogContent() {
               <div className="relative z-10 w-full p-5 lg:p-8 flex flex-col gap-1.5">
                 <div className="flex items-center lg:gap-3 gap-1.5 text-zinc-300">
                   <Clock className="stroke-current lg:w-5 w-3.5" />
-                  <p className="font-medium lg:text-[16px] text-[12px] tracking-wide">
+                  <p className="font-medium text-[clamp(12px,1.3vw,106px)] tracking-wide">
                     {featuredPost.date}
                   </p>
                 </div>
-                <h1 className="font-bold text-white lg:text-[28px] text-[22px] leading-tight drop-shadow-md line-clamp-2">
+                <h1 className="font-bold text-white text-[clamp(22px,2.1vw,280px)] leading-tight drop-shadow-md line-clamp-2">
                   {featuredPost.title}
                 </h1>
               </div>
