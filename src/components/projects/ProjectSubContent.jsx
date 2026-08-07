@@ -46,7 +46,7 @@ function ProjectSubContent({
       const calculatedSize = Math.floor(
         (containerWidth + blockMargin) / weeks - blockMargin,
       );
-      const clamped = Math.max(10, Math.min(20, calculatedSize));
+      const clamped = Math.max(10, Math.min(32, calculatedSize));
       setBlockSize(clamped);
     };
 
