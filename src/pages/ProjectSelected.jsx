@@ -21,12 +21,12 @@ function ProjectSelected(){
 
      const sidebarProjects = projectsData.filter((p) => p.slug !== slug).slice(0,4);
     return(
-        <div className="grid lg:grid-cols-[2.5fr_1fr] grid-cols-1 px-3 lg:px-0 gap-3 " ref={scrollContainerRef}>
-            <div className="overflow-y-auto no-scrollbar lg:py-3 pt-3" key={slug}>
+        <div className="grid lg:grid-cols-[2.5fr_1fr] grid-cols-1 px-3 lg:px-0 gap-[clamp(12px,0.85vw,3rem)] " ref={scrollContainerRef}>
+            <div className="overflow-y-auto no-scrollbar lg:py-[clamp(12px,0.85vw,3rem)] pt-3" key={slug}>
                 <ProjectSelectedContent project={project}/>
             </div>
-            <div className="overflow-y-auto no-scrollbar lg:py-3 lg:pt-3 lg:pr-3 pb-3 ">
-                <ProjectSubContent className="w-full grid-col-1 gap-3 grid" projectList={sidebarProjects} showViewAll={true}/>
+            <div className="overflow-y-auto no-scrollbar lg:py-[clamp(12px,0.85vw,3rem)] lg:pt-[clamp(12px,0.85vw,3rem)] lg:pr-[clamp(12px,0.85vw,3rem)] pb-3 ">
+                <ProjectSubContent className="w-full grid-col-1 gap-[clamp(12px,0.85vw,3rem)] grid" projectList={sidebarProjects} showViewAll={true}/>
             </div>
             
         </div>

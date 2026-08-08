@@ -24,11 +24,11 @@ function BlogContent() {
 
   if (isLoading) {
     return (
-      <div className="w-full gap-3 h-full flex flex-col lg:px-0 py-3 lg:py-3 overflow-y-auto no-scrollbar">
+      <div className="w-full gap-[clamp(0.75rem,0.85vw,3rem)] h-full flex flex-col lg:px-0 py-[clamp(12px,0.85vw,3rem)] lg:py-[clamp(12px,0.85vw,3rem)] overflow-y-auto no-scrollbar">
         <BentoCard title={"Blogs"} icon={<BookOpen className="stroke-black" />}>
-          <div className="w-full flex flex-col gap-3">
+          <div className="w-full flex flex-col gap-[clamp(0.75rem,0.85vw,3rem)]">
             <Skeleton className="w-full rounded-[14px] aspect-4/2.5 lg:aspect-5/3" />
-            <div className="w-full grid lg:grid-cols-2 gap-3">
+            <div className="w-full grid lg:grid-cols-2 gap-[clamp(0.75rem,0.85vw,3rem)]">
               {[1, 2].map((i) => (
                 <Skeleton
                   key={i}
@@ -43,9 +43,9 @@ function BlogContent() {
   }
 
   return (
-    <div className=" w-full overflow-y-auto no-scrollbar overflow-hidden py-3">
+    <div className=" w-full overflow-y-auto no-scrollbar overflow-hidden py-[clamp(12px,0.85vw,3rem)]">
       <BentoCard title={"Blogs"} icon={<BookOpen className="stroke-black" />}>
-        <div className="w-full flex flex-col gap-3">
+        <div className="w-full flex flex-col gap-[clamp(0.75rem,0.85vw,3rem)]">
           {/* 1. FEATURED POST (Main/Malaki) */}
           {featuredPost && (
             <Link
@@ -67,9 +67,9 @@ function BlogContent() {
               <div className="absolute inset-0 bg-linear-to-t from-[#234170] via-black/45 to-transparent  transition-opacity duration-500"></div>
 
               {/* Text Content */}
-              <div className="relative z-10 w-full p-5 lg:p-8 flex flex-col gap-1.5">
-                <div className="flex items-center lg:gap-3 gap-1.5 text-zinc-300">
-                  <Clock className="stroke-current lg:w-5 w-3.5" />
+              <div className="relative z-10 w-full p-[clamp(1.25rem,1.4vw,4rem)] lg:p-[clamp(2rem,2.2vw,6rem)] flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)]">
+                <div className="flex items-center gap-[clamp(0.375rem,0.8vw,2.5rem)] text-zinc-300">
+                  <Clock className="stroke-current w-[clamp(0.875rem,1.2vw,4rem)] h-[clamp(0.875rem,1.2vw,4rem)]" />
                   <p className="font-medium text-[clamp(12px,1.3vw,106px)] tracking-wide">
                     {featuredPost.date}
                   </p>
@@ -84,7 +84,7 @@ function BlogContent() {
           {/* 2. OTHER POSTS GRID (Yung dalawa sa ilalim) */}
           <div
             key="other-posts-m"
-            className="animate-in fade-in duration-700 delay-200 fill-mode-both transform-gpu will-change-transform w-full grid lg:grid-cols-2 gap-3"
+            className="animate-in fade-in duration-700 delay-200 fill-mode-both transform-gpu will-change-transform w-full grid lg:grid-cols-2 gap-[clamp(0.75rem,0.85vw,3rem)]"
           >
             {otherPosts.map((post) => (
               <Link
@@ -104,14 +104,14 @@ function BlogContent() {
 
                 <div className="absolute inset-0 bg-linear-to-t from-[#234170] via-black/45 to-transparent transition-opacity duration-500"></div>
 
-                <div className="relative z-10 w-full p-4 flex flex-col gap-1">
-                  <div className="flex items-center gap-1.5 text-zinc-300">
-                    <Clock className="stroke-current lg:w-4 w-3.5" />
-                    <p className="font-medium text-[12px] lg:text-[13px] tracking-wide shrink-0">
+                <div className="relative z-10 w-full p-[clamp(1rem,1.1vw,3rem)] flex flex-col gap-[clamp(0.25rem,0.35vw,1.5rem)]">
+                  <div className="flex items-center gap-[clamp(0.375rem,0.45vw,1.5rem)] text-zinc-300">
+                    <Clock className="stroke-current w-[clamp(0.875rem,1.1vw,3rem)] h-[clamp(0.875rem,1.1vw,3rem)]" />
+                    <p className="font-medium text-[clamp(12px,0.95vw,3rem)] tracking-wide shrink-0">
                       {post.date}
                     </p>
                   </div>
-                  <h1 className="font-bold text-white lg:text-[18px] text-[22px] leading-tight drop-shadow-md line-clamp-2">
+                  <h1 className="font-bold text-white text-[clamp(18px,1.4vw,4.5rem)] leading-tight drop-shadow-md line-clamp-2">
                     {post.title}
                   </h1>
                 </div>

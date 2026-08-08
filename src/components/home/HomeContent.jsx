@@ -98,48 +98,46 @@ function Content() {
 
   if (isLoading) {
     return (
-      <div className="w-full flex flex-col gap-3 lg:p-0 p-3 lg:overflow-y-auto no-scrollbar lg:py-3 select-none ">
+      <div className="w-full flex flex-col gap-[clamp(12px,0.85vw,4rem)] lg:p-0 p-3 lg:overflow-y-auto no-scrollbar lg:py-[clamp(12px,0.85vw,4rem)] select-none ">
         {/* Hero Banner Skeleton */}
-        <div className="w-full flex flex-col rounded-[14px] shrink-0 overflow-hidden relative group select-none">
+        <div className="w-full flex flex-col rounded-[clamp(10px,1vw,3rem)] shrink-0 overflow-hidden relative group select-none">
           <Skeleton className="w-full absolute inset-0 z-0 rounded-none " />
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent z-10 pointer-events-none"></div>
 
-          <div className="w-full relative h-90 sm:h-80 lg:h-72 z-20">
+          <div className="w-full relative aspect-video sm:aspect-16/7 min-h-75 lg:min-h-80 xl:min-h-80 h-auto z-20">
             {/* The Clock Skeleton */}
-            <div className="absolute top-4 right-4 z-20">
-              <Skeleton className="w-36 h-8 rounded-full bg-white/20" />
+            <div className="absolute top-[clamp(0.75rem,1.2vw,3.75rem)] right-[clamp(0.75rem,1.2vw,3.75rem)] z-20">
+              <Skeleton className="w-[clamp(9rem,12vw,30rem)] h-[clamp(2rem,2.2vw,6rem)] rounded-full bg-white/20" />
             </div>
 
             {/* Overlay Content Skeleton */}
-            <div className="absolute bottom-5 left-5 right-5 lg:bottom-8 lg:left-8 lg:right-auto z-20 flex flex-col gap-3 lg:gap-4 max-w-lg text-white">
-              <div className="flex flex-col gap-2">
-                <Skeleton className="h-8 lg:h-10 w-3/4 bg-white/20" />
-                <Skeleton className="h-8 lg:h-10 w-1/2 bg-white/20" />
-                <div className="mt-1 lg:mt-3 flex flex-col gap-2 w-full">
-                  <Skeleton className="h-4 w-[90%] bg-white/20" />
-                  <Skeleton className="h-4 w-[80%] bg-white/20" />
-                  <Skeleton className="h-4 w-[60%] lg:w-62.5 bg-white/20" />
+            <div className="absolute bottom-[clamp(1.25rem,2.5vw,5.75rem)] left-[clamp(1.25rem,2.5vw,5.75rem)] z-20 flex flex-col gap-[clamp(12px,1.1vw,6rem)] max-w-[85%] lg:max-w-[68%] w-full">
+              <div className="flex flex-col gap-[clamp(4px,0.30vw,2rem)]">
+                <Skeleton className="h-[clamp(1.625rem,2.8vw,9.25rem)] w-3/4 bg-white/20" />
+                <Skeleton className="h-[clamp(1.625rem,2.8vw,9.25rem)] w-1/2 bg-white/20" />
+                <div className="mt-1 lg:mt-2 flex flex-col gap-[clamp(0.25rem,0.4vw,1.5rem)] w-full">
+                  <Skeleton className="h-[clamp(0.8125rem,1.1vw,3rem)] w-[90%] bg-white/20" />
+                  <Skeleton className="h-[clamp(0.8125rem,1.1vw,3rem)] w-[80%] bg-white/20" />
+                  <Skeleton className="h-[clamp(0.8125rem,1.1vw,3rem)] w-[60%] bg-white/20" />
                 </div>
               </div>
 
-              <div className="flex lg:flex-row flex-col items-start gap-3 mt-1 lg:mt-2">
-                <Skeleton className="w-full sm:w-35 h-11.5 lg:h-9.5 rounded-[10px] bg-white/20" />
-                <Skeleton className="w-full sm:w-45 h-11.5 lg:h-9.5 rounded-[10px] bg-white/20" />
+              <div className="flex lg:flex-row flex-col items-start gap-[clamp(0.5rem,0.9vw,1.875rem)] mt-1 lg:mt-2">
+                <Skeleton className="w-full sm:w-[clamp(8rem,10vw,25rem)] h-[clamp(2.5rem,3vw,9rem)] rounded-[clamp(10px,0.7vw,3rem)] bg-white/20" />
+                <Skeleton className="w-full sm:w-[clamp(10rem,12vw,30rem)] h-[clamp(2.5rem,3vw,9rem)] rounded-[clamp(10px,0.7vw,3rem)] bg-white/20" />
               </div>
             </div>
           </div>
         </div>
 
         {/* Stats Skeleton */}
-        {/* Napansin mo ba? Ginamit pa rin natin ang BentoCard para sa container, pero Skeleton ang nasa loob */}
         <BentoCard
           title={"Stats"}
           icon={<ChartNoAxesCombined className={"stroke-black"} />}
         >
-          <div className="grid lg:grid-cols-4 gap-3 grid-cols-2">
-            {/* Gagamit tayo ng simpleng array [1,2,3,4] para mag-map ng 4 na skeleton boxes */}
+          <div className="grid lg:grid-cols-4 gap-[clamp(0.5rem,0.7vw,3rem)] grid-cols-2">
             {[1, 2, 3, 4].map((i) => (
-              <Skeleton key={i} className="w-full h-32 rounded-[10px]" />
+              <Skeleton key={i} className="w-full h-[clamp(8rem,9vw,25rem)] rounded-[clamp(10px,0.7vw,2rem)]" />
             ))}
           </div>
         </BentoCard>
@@ -149,15 +147,13 @@ function Content() {
           title={"Highlights"}
           icon={<Pin className={"stroke-black"} />}
         >
-          <div className="flex w-full gap-3 overflow-x-hidden">
+          <div className="flex w-full gap-[clamp(0.5rem,0.7vw,3rem)] overflow-x-hidden">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="flex flex-col w-57.5 shrink-0 gap-3">
-                {/* Image Skeleton */}
-                <Skeleton className="w-full aspect-14/10 rounded-2xl" />
-                {/* Title and Text Skeletons */}
-                <div className="flex flex-col gap-2">
-                  <Skeleton className="h-4 w-3/4" />
-                  <Skeleton className="h-4 w-1/2" />
+              <div key={i} className="flex flex-col flex-1 min-w-[clamp(220px,16vw,800px)] shrink-0 gap-[clamp(0.5rem,0.7vw,3rem)]">
+                <Skeleton className="w-full aspect-14/10 rounded-[clamp(0.75rem,1vw,3rem)]" />
+                <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] p-[clamp(0.75rem,1.2vw,5rem)]">
+                  <Skeleton className="h-[clamp(1rem,1.1vw,5rem)] w-3/4" />
+                  <Skeleton className="h-[clamp(1rem,1.1vw,5rem)] w-1/2" />
                 </div>
               </div>
             ))}
@@ -370,8 +366,8 @@ function Content() {
                 </h1>
 
                 <div className="flex items-center gap-[clamp(0.25rem,0.5vw,2rem)] mt-auto">
-                  <Clock className="stroke-ring w-[clamp(0.75rem,1.1vw,5rem)] h-[clamp(0.75rem,1.1vw,5rem)]" />
-                  <p className="font-light text-[clamp(0.6875rem,1.1vw,5rem)] text-ring line-clamp-1">
+                  <Clock className="stroke-ring w-[clamp(0.75rem,1vw,3rem)] h-[clamp(0.75rem,1vw,3rem)]" />
+                  <p className="font-light text-[clamp(0.6875rem,1vw,3rem)] text-ring line-clamp-1">
                     {post.date}
                   </p>
                 </div>

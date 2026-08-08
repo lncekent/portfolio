@@ -2,7 +2,7 @@ function Preloader() {
   return (
     // Solid background na pumapatong sa lahat (z-[99999])
     <div className="fixed inset-0 w-full min-h-screen flex flex-col justify-center items-center bg-[#ECECEC] dark:bg-[#2e2e2e] select-none z-99999">
-      <div className="relative flex items-center justify-center h-24 w-24">
+      <div className="relative flex items-center justify-center h-[clamp(96px,6.7vw,20rem)] w-[clamp(96px,6.7vw,20rem)]">
         {/* WAVES (Pings): Gray/Zinc colors imbes na Blue */}
         <div className="absolute animate-ping rounded-full h-full w-full bg-zinc-500 dark:bg-zinc-400 opacity-20"></div>
         <div className="absolute animate-ping rounded-full h-3/4 w-3/4 bg-zinc-500 dark:bg-zinc-400 opacity-30 [animation-delay:0.3s]"></div>

@@ -81,7 +81,7 @@ function App() {
   return (
     <TooltipProvider>
       <Router>
-        <div className="flex bg-[#ECECEC] dark:bg-[#2e2e2e] flex-col lg:flex-row lg:h-screen overflow-hidden lg:gap-[clamp(12px,0.85vw,4rem)] w-full">
+        <div className="flex bg-[#ECECEC] dark:bg-[#2e2e2e] flex-col md:flex-row lg:h-screen lg:overflow-hidden lg:gap-[clamp(12px,0.85vw,4rem)] w-full">
           <Sidebar />
           <Routes>
             <Route path="/" element={<Home />} />

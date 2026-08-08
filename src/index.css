@@ -179,15 +179,24 @@
   display: none;
 }
 
-/* Make the contribution calendar fill available width */
-.calendar-wrapper .react-activity-calendar {
+/* Make all calendar text (month labels, legend, footer) scale with the component */
+.calendar-wrapper text,
+.calendar-wrapper span,
+.calendar-wrapper p,
+.calendar-wrapper footer,
+.calendar-wrapper small {
+  font-size: var(--calendar-font-size, 14px) !important;
+}
+
+/* Make the contribution calendar fill available width (only in fill mode) */
+.calendar-wrapper.fill .react-activity-calendar {
   width: 100% !important;
   max-width: 100% !important;
 }
-.calendar-wrapper .react-activity-calendar__scroll-container {
+.calendar-wrapper.fill .react-activity-calendar__scroll-container {
   overflow: visible !important;
 }
-.calendar-wrapper .react-activity-calendar__calendar {
+.calendar-wrapper.fill .react-activity-calendar__calendar {
   width: 100% !important;
   height: auto !important;
 }

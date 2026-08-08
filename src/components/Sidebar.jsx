@@ -114,7 +114,7 @@ function Sidebar() {
           </div>
         </div>
       )}
-      <div className="lg:hidden block w-full bg-transparent px-3 pt-3 ">
+      <div className="md:hidden block w-full bg-transparent px-3 pt-3 ">
         <div className="lg:hidden w-full h-14 bg-card rounded-[10px] px-3 flex justify-between items-center">
           <Link to={"/"} className="w-fit h-full items-center flex gap-2">
             <div className="h-8 w-8 rounded-full overflow-hidden">
@@ -148,12 +148,12 @@ function Sidebar() {
       </div>
 
       <div
-        className={`fixed  inset-0 bg-black/20 z-40 transition-opacity duration-300 lg:hidden ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`fixed  inset-0 bg-black/20 z-40 transition-opacity duration-300 md:hidden ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         onClick={() => setIsMenuOpen(false)}
       ></div>
 
       <div
-        className={`fixed top-0 left-0 h-full w-[75%] bg-card z-50 transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto no-scrollbar ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-[75%] bg-card z-50 transition-transform duration-300 ease-in-out md:hidden overflow-y-auto no-scrollbar ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="p-4 flex flex-col h-full justify-between">
           <div className="flex flex-col">
@@ -302,7 +302,7 @@ function Sidebar() {
         </div>
       </div>
 
-      <nav className="hidden lg:block max-h-screen w-[18%] bg-card rounded-[clamp(10px,0.7vw,3rem)] p-[clamp(1rem,1.1vw,4rem)] my-[clamp(12px,0.85vw,4rem)] ml-[clamp(12px,0.85vw,4rem)] select-none shrink-0">
+      <nav className="hidden md:block md:overflow-y-auto md:max-h-[calc(100vh-clamp(24px,1.7vw,8rem))] no-scrollbar lg:h-[calc(100vh-clamp(24px,1.7vw,8rem))] md:h-fit lg:max-h-screen lg:w-[18%] md:w-[23%] bg-card rounded-[clamp(10px,0.7vw,3rem)] px-[clamp(1rem,1.1vw,4rem)] pt-[clamp(1rem,1.1vw,4rem)] my-[clamp(12px,0.85vw,4rem)] ml-[clamp(12px,0.85vw,4rem)] select-none sticky top-3 shrink-0">
         <div className="w-full flex flex-col h-full justify-between">
           <div className="w-full flex flex-col">
             <div className="w-full flex justify-center">
@@ -440,10 +440,14 @@ function Sidebar() {
               <p className="text-zinc-600 dark:text-zinc-400 font-light text-[clamp(12px,0.85vw,4rem)] leading-relaxed line-clamp-1">
                 Designed and Built By Lance Kent Geoffrey B. Magollado
               </p>
-              <p className="text-zinc-600 dark:text-zinc-400 font-light text-[clamp(12px,0.85vw,4rem)] leading-relaxed">
+              <p className="text-zinc-600 dark:text-zinc-400 font-light text-[clamp(12px,0.85vw,4rem)] leading-relaxed  ">
                 @2025 All Rights Reserved.
               </p>
             </div>
+            <div
+              className="shrink-0 h-[clamp(0.5rem,0.6vw,2rem)]"
+              aria-hidden="true"
+            ></div>
           </div>
         </div>
       </nav>

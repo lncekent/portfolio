@@ -55,12 +55,12 @@ function BlogSubContent() {
 
   if (isLoading) {
     return (
-      <div className="w-full overflow-y-auto no-scrollbar overflow-hidden flex flex-col gap-3 lg:pr-3 lg:pb-3 lg:py-3 py-0 pb-0">
+      <div className="w-full overflow-y-auto no-scrollbar overflow-hidden flex flex-col gap-[clamp(0.75rem,0.85vw,3rem)] lg:pr-[clamp(12px,0.85vw,3rem)] lg:pb-[clamp(12px,0.85vw,3rem)] lg:py-[clamp(12px,0.85vw,3rem)] py-0 pb-0">
         <BentoCard
           title={"Recent Posts"}
           icon={<History className="stroke-black" />}
         >
-          <div className="flex flex-col w-full gap-3">
+          <div className="flex flex-col w-full gap-[clamp(0.75rem,0.85vw,3rem)]">
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
@@ -69,9 +69,9 @@ function BlogSubContent() {
                 <div className="lg:aspect-4/2 aspect-square w-3/4 lg:w-full min-w-20 relative rounded-none shrink-0 border-zinc-200 dark:border-zinc-800">
                   <Skeleton className="absolute inset-0 w-full h-full rounded-none" />
                 </div>
-                <div className="w-full p-3 bg-white dark:bg-zinc-900/40 rounded-none flex flex-col gap-2 justify-center lg:justify-start">
+                <div className="w-full p-[clamp(0.75rem,0.85vw,3rem)] bg-white dark:bg-zinc-900/40 rounded-none flex flex-col gap-[clamp(0.5rem,0.6vw,2rem)] justify-center lg:justify-start">
                   <Skeleton className="h-4 w-5/6" />
-                  <div className="flex items-center gap-2 mt-1">
+                  <div className="flex items-center gap-[clamp(0.5rem,0.6vw,2rem)] mt-1">
                     <Skeleton className="h-3 w-3 rounded-full" />
                     <Skeleton className="h-3 w-16" />
                   </div>
@@ -86,15 +86,18 @@ function BlogSubContent() {
           icon={<Phone className="stroke-black" />}
           className="h-full"
         >
-          <div className="flex flex-col justify-between gap-10 h-full">
-            <ul className="flex gap-4 w-full flex-wrap">
+          <div className="flex flex-col justify-between gap-[clamp(1.5rem,2vw,5rem)] h-full">
+            <ul className="flex gap-[clamp(0.75rem,0.9vw,2.5rem)] w-full flex-wrap">
               {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-                <li key={i} className="w-9 h-9">
+                <li
+                  key={i}
+                  className="w-[clamp(2.25rem,2.6vw,8rem)] h-[clamp(2.25rem,2.6vw,8rem)]"
+                >
                   <Skeleton className="w-full h-full rounded-full" />
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col gap-1.5 mt-2">
+            <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] mt-[clamp(0.5rem,0.6vw,2rem)]">
               <Skeleton className="h-4 w-full" />
               <Skeleton className="h-4 w-5/6" />
             </div>
@@ -105,14 +108,14 @@ function BlogSubContent() {
   }
 
   return (
-    <div className="w-full overflow-y-auto no-scrollbar overflow-hidden flex flex-col gap-3 lg:pr-3 lg:pb-3 lg:py-3 py-0 pb-0">
+    <div className="w-full overflow-y-auto no-scrollbar overflow-hidden flex flex-col gap-[clamp(0.75rem,0.85vw,3rem)] lg:pr-[clamp(12px,0.85vw,3rem)] lg:pb-[clamp(12px,0.85vw,3rem)] lg:py-[clamp(12px,0.85vw,3rem)] py-0 pb-0">
       <BentoCard
         title={"Recent Posts"}
         icon={<History className="stroke-black" />}
       >
         <div
           key="bp-m"
-          className="animate-in fade-in duration-700 delay-250 fill-mode-both transform-gpu will-change-transform flex flex-col w-full gap-3 h-full"
+          className="animate-in fade-in duration-700 delay-250 fill-mode-both transform-gpu will-change-transform flex flex-col w-full gap-[clamp(0.75rem,0.85vw,3rem)] h-full"
         >
           {currentPosts.length > 0 ? (
             currentPosts.map((post) => (
@@ -121,7 +124,7 @@ function BlogSubContent() {
                 to={`/blog-selected/${post.slug}`}
                 className="w-full flex cursor-pointer group border rounded-2xl overflow-hidden"
               >
-                <div className="lg:aspect-4/2 aspect-square dark:bg-zinc-900/40 w-3/4 lg:w-75 min-w-20 overflow-hidden relative">
+                <div className="lg:aspect-4/2 aspect-square dark:bg-zinc-900/40 w-2/4 lg:w-[clamp(3rem,11vw,40rem)] min-w-20 overflow-hidden relative shrink-0">
                   {post.thumbnail && (
                     <img
                       src={post.thumbnail}
@@ -130,13 +133,13 @@ function BlogSubContent() {
                     />
                   )}
                 </div>
-                <div className="w-full p-3 bg-white dark:bg-zinc-900/40  flex flex-col gap-1 justify-center lg:justify-start overflow-hidden">
-                  <h1 className="font-semibold lg:text-[15px] text-[14px] line-clamp-3">
+                <div className="w-full p-[clamp(0.75rem,0.85vw,3rem)] bg-white dark:bg-zinc-900/40  flex flex-col gap-[clamp(0.25rem,0.35vw,1.5rem)] justify-center lg:justify-start overflow-hidden">
+                  <h1 className="font-semibold text-[clamp(14px,1vw,3.5rem)] line-clamp-3">
                     {post.title}
                   </h1>
-                  <div className="flex items-center gap-1">
-                    <Clock className="lg:w-3 w-3 stroke-ring" />
-                    <p className="font-light lg:text-[12px] text-[10px] text-ring">
+                  <div className="flex items-center gap-[clamp(0.25rem,0.35vw,1.5rem)]">
+                    <Clock className="w-[clamp(0.75rem,0.85vw,2.5rem)] h-[clamp(0.75rem,0.85vw,2.5rem)] stroke-ring" />
+                    <p className="font-light text-[clamp(10px,0.85vw,2.5rem)] text-ring">
                       {post.date}
                     </p>
                   </div>
@@ -149,7 +152,7 @@ function BlogSubContent() {
             </div>
           )}
           {totalPages > 1 && (
-            <Pagination className="pt-3 pb-1">
+            <Pagination className="pt-[clamp(0.75rem,0.85vw,3rem)] pb-[clamp(0.25rem,0.35vw,1.5rem)] [&_a]:text-[clamp(14px,1vw,3.5rem)]! [&_a]:h-auto! [&_a]:px-[clamp(0.625rem,1vw,5rem)]! [&_a]:py-[clamp(0.375rem,0.45vw,1.5rem)]! [&_svg]:w-[clamp(1rem,1.1vw,3rem)]! [&_svg]:h-[clamp(1rem,1.1vw,3rem)]!">
               <PaginationContent>
                 <PaginationItem>
                   <PaginationPrevious

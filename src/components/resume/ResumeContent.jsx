@@ -59,16 +59,16 @@ function ResumeContent() {
 
   if (isLoading) {
     return (
-      <div className="w-full h-full lg:pr-3 px-3 lg:px-0 py-3 overflow-y-auto no-scrollbar overflow-hidden flex flex-col gap-3 min-h-[101vh]">
+      <div className="w-full h-full lg:pr-[clamp(12px,0.85vw,3rem)] px-3 lg:px-0 py-[clamp(12px,0.85vw,3rem)] overflow-y-auto no-scrollbar overflow-hidden flex flex-col gap-[clamp(12px,0.85vw,3rem)] min-h-[101vh]">
         <BentoCard
           title={"Resume"}
           icon={<FileUser className="stroke-black" />}
           className="w-full relative gap-4 "
         >
-          <div className="absolute lg:top-5 top-4 right-4.5 z-10 hidden sm:block">
-            <Skeleton className="w-31 h-11.5 rounded-sm" />
+          <div className="absolute lg:top-[clamp(14px,1vw,4rem)] top-4 right-[clamp(18px,1.25vw,4rem)] z-10 hidden sm:block">
+            <Skeleton className="w-[clamp(7.75rem,8.5vw,25rem)] h-[clamp(2.875rem,3.2vw,10rem)] rounded-sm" />
           </div>
-          <div className="relative w-full h-125 mt-3 lg:h-auto rounded-[10px] overflow-hidden bg-[#1a1a1a] flex justify-center py-10 px-5">
+          <div className="relative w-full h-125 mt-[clamp(0.75rem,0.85vw,3rem)] lg:h-auto rounded-[10px] overflow-hidden bg-[#1a1a1a] flex justify-center py-[clamp(2.5rem,2.8vw,8rem)] px-[clamp(1.25rem,1.4vw,4rem)]">
             <Skeleton className="w-[80%] h-full min-h-125" />
           </div>
         </BentoCard>
@@ -78,17 +78,17 @@ function ResumeContent() {
           icon={<Phone className="stroke-black" />}
           className="h-full"
         >
-          <div className="flex flex-col justify-between gap-10 h-full">
-            <ul className="flex gap-4 w-full flex-wrap">
+          <div className="flex flex-col justify-between gap-[clamp(1.5rem,2vw,5rem)] h-full">
+            <ul className="flex gap-[clamp(0.75rem,0.9vw,2.5rem)] w-full flex-wrap">
               {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-                <li key={i} className="w-9 h-9">
+                <li key={i} className="w-[clamp(2.25rem,2.6vw,8rem)] h-[clamp(2.25rem,2.6vw,8rem)]">
                   <Skeleton className="w-full h-full rounded-full" />
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col gap-1.5 mt-2">
-              <Skeleton className="h-4 w-full" />
-              <Skeleton className="h-4 w-5/6" />
+            <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] mt-[clamp(0.5rem,0.6vw,2rem)]">
+              <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-full" />
+              <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-5/6" />
             </div>
           </div>
         </BentoCard>

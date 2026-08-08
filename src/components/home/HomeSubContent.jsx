@@ -28,11 +28,11 @@ function SubContent() {
 
   if (isLoading) {
     return (
-      <div className="w-full flex flex-col gap-3 lg:overflow-y-auto lg:no-scrollbar lg:py-3 lg:pr-3 select-none px-3 lg:px-0">
+      <div className="w-full flex flex-col gap-[clamp(12px,0.85vw,4rem)] lg:overflow-y-auto lg:no-scrollbar lg:py-[clamp(12px,0.85vw,4rem)] lg:pr-[clamp(12px,0.85vw,4rem)] select-none px-3 lg:px-0">
         <BentoCard title="Technologies" icon={<Cpu className="stroke-black" />}>
-          <div className="flex flex-col gap-3 overflow-hidden h-29">
-            <Skeleton className="w-full h-11 rounded-md" />
-            <Skeleton className="w-full h-11 rounded-md" />
+          <div className="flex flex-col gap-[clamp(0.75rem,0.85vw,3rem)] overflow-hidden h-29">
+            <Skeleton className="w-full h-[clamp(2.75rem,3.2vw,10rem)] rounded-md" />
+            <Skeleton className="w-full h-[clamp(2.75rem,3.2vw,10rem)] rounded-md" />
           </div>
         </BentoCard>
 
@@ -40,28 +40,28 @@ function SubContent() {
           title="Skills"
           icon={<UserRoundCheck className="stroke-black" />}
         >
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-[clamp(0.75rem,0.85vw,3rem)]">
             {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="flex items-center gap-3 py-1">
-                <Skeleton className="shrink-0 w-8 h-8 lg:w-10 lg:h-10 rounded-full" />
-                <Skeleton className="h-5 w-3/4 rounded-md" />
+              <div key={i} className="flex items-center gap-[clamp(0.75rem,0.9vw,3rem)] py-[clamp(0.25rem,0.35vw,1.5rem)]">
+                <Skeleton className="shrink-0 w-[clamp(2.5rem,3vw,10rem)] h-[clamp(2.5rem,3vw,10rem)] rounded-full" />
+                <Skeleton className="h-[clamp(1.25rem,1.4vw,4rem)] w-3/4 rounded-md" />
               </div>
             ))}
           </div>
         </BentoCard>
 
         <BentoCard title="Contact Me" icon={<Phone className="stroke-black" />}>
-          <div className="flex flex-col justify-between gap-10 h-full">
-            <ul className="flex gap-4 w-full flex-wrap">
+          <div className="flex flex-col justify-between gap-[clamp(1.5rem,2vw,5rem)] h-full">
+            <ul className="flex gap-[clamp(0.75rem,0.9vw,2.5rem)] w-full flex-wrap">
               {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-                <li key={i} className="w-9 h-9">
+                <li key={i} className="w-[clamp(2.25rem,2.6vw,8rem)] h-[clamp(2.25rem,2.6vw,8rem)]">
                   <Skeleton className="w-full h-full rounded-full" />
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col gap-1.5 mt-2">
-              <Skeleton className="h-4 w-full" />
-              <Skeleton className="h-4 w-5/6" />
+            <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] mt-[clamp(0.5rem,0.6vw,2rem)]">
+              <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-full" />
+              <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-5/6" />
             </div>
           </div>
         </BentoCard>
