@@ -5,7 +5,7 @@ description: Current task progress and checklist for the portfolio project. Use 
 
 # Task State — Lance Kent Portfolio
 
-**Last Updated:** 2026-08-07 (11:09 AM)  
+**Last Updated:** 2026-08-08 (7:30 PM)  
 **Total Commits:** 309  
 **Timeline:** February 25, 2026 → Present  
 
@@ -26,78 +26,60 @@ description: Current task progress and checklist for the portfolio project. Use 
 13. Content Updates (7 projects, 12 achievements, 8 blogs, experience updates)
 14. GitHub Contributions Calendar (react-github-calendar, dynamic sizing, stats)
 
-## Active Work: Responsiveness Enhancement 🟡
+## Active Work: Responsiveness Enhancement ✅ COMPLETE
 
 ### Approach
-- Keep the `zoom: calc(100vw / 1440)` strategy (scales content proportionally on wide viewports)
-- Apply `clamp(min, preferred-vw, high-max)` to all components so they grow with the zoom
-- **Rule:** min value = original default size (nothing changes at default 1440px view)
-- **Rule:** max value = very high (allows free scaling when zoomed out)
-- **Rule:** Don't modify `src/components/ui/` (shadcn primitives)
+- `zoom: calc(100vw / 1440)` on `#root` at ≥1440px scales everything on wide viewports
+- `clamp(min, preferred-vw, max)` on all components so they grow/shrink fluidly
+- min = original default size, max = high value for zoom-out scaling
+- Don't modify `src/components/ui/` (shadcn primitives)
 
-### Phase R1: Home Page Fluidity ✅ DONE
-- [x] Banner: aspect ratios, clamp on all text, icons, buttons, badge, clock, rounded corners
-- [x] Stats: fluid numbers (min 30px), labels (min 16px), icons (clamp w/h), padding, gaps, rounded
-- [x] Highlights: fluid card title (min 16px), date (1.1vw), carousel gap, card padding, rounded corners
-- [x] Highlights chevron arrows: fluid size, position changed to `top-1/2 -translate-y-1/2` (centered)
-- [x] Highlights ResizeObserver: re-checks scroll state on zoom in/out (fixes disabled button bug)
-- [x] BentoCard (global): fluid padding, gap, rounded, header gap, icon wrapper forces SVG fill
-- [x] Section gap: kept at `gap-3` (fixed 12px, same as outer layout)
+### Fluidity Applied To (All ✅):
+- **Home** — Banner, Stats, Highlights, Skills, TechMarquee, ContactMe + skeleton
+- **About** — Banner, About text, Highlights carousel, Certificates (list variant), Education, Experience, Organizations, ContactMe + skeleton
+- **Projects** — Featured cards, Other Projects list, GitHub Calendar (dynamic blockSize + fontSize), ProjectSelected detail page, icons + skeleton
+- **Achievements** — Card variant (image, footer, text), List variant (in About), Certificate dialog (uniform transform scale for zoom-out) + skeleton
+- **Blog** — Blog list (featured + other posts), Recent Posts sidebar, Blog detail, pagination, icons + skeleton
+- **Resume** — PDF scale formula (`windowWidth / 1150`), debounced resize, page-size reservation to prevent container collapse on re-render + skeleton
+- **Sidebar** — Full desktop fluidity (avatar, text, nav links, icons, switch, footer)
+- **BentoCard** — Global fluid padding, gap, rounded, icon sizing
+- **ContactMe** — Fluid icons, gaps, text (shared component)
 
-### Phase R2: HomeSubContent Fluidity ✅ DONE
-- [x] Skills accordion: fluid icon size (3vw), title (1.1vw), description (1vw), gap between items, py on trigger
-- [x] TechMarquee: fluid icon size (2.8vw), padding, horizontal gap via `[--gap:clamp()]` override
-- [x] TechMarquee rows: vertical gap added `gap-[clamp(0.25rem,0.5vw,2rem)]`
-- [x] ContactMe: fluid icon size (2.5vw), gap, section gap, description text (1.1vw)
+### Resume Page Special Handling:
+- PDF scale computed as `windowWidth / 1150` (responsive to viewport)
+- Debounced resize (200ms) prevents flicker during rapid zoom
+- Page size reserved via inline `width`/`height` to prevent container collapse during re-render
 
-### Phase R3: Desktop Sidebar Fluidity ✅ DONE
-- [x] Nav container: fluid padding, rounded corners
-- [x] Avatar: fluid w/h `clamp(3.75rem,4.5vw,12rem)`
-- [x] Name: `clamp(18px,1.3vw,5rem)`, subtitle: `clamp(13px,0.95vw,4rem)`
-- [x] Resume button: fluid py, gap, text, rounded, icon size
-- [x] Nav links: fluid text (1.1vw), icons (1.4vw), padding, gaps — all consistent
-- [x] Dark mode toggle: `[zoom:clamp()]` wrapper for Switch scaling
-- [x] Footer text: fluid `clamp(12px,0.85vw,4rem)`, allows wrapping
-- [x] Divider margins: fluid clamp
-- [x] Added `shrink-0` to prevent sidebar compression on About/other pages
+### Achievements Dialog Special Handling:
+- Dialog portaled outside `#root` (doesn't inherit app zoom)
+- `transform: scale(uiScale)` applied when viewport ≥1440px
+- Preserves original rectangle proportions at all zoom levels
+- Mobile layout unchanged (uiScale=1, no transform)
 
-### Phase R4: About Page Fluidity — NOT STARTED
-- [ ] AboutContent: banner, About text, Highlights carousel, Certificates list
-- [ ] AboutSubContent: Education, Experience, Organizations, Contact Me
-- [ ] Apply same clamp pattern (min = original defaults, high max)
-- [ ] Verify sidebar doesn't shrink (fixed with shrink-0)
+### GitHub Calendar Special Handling:
+- Full-width Projects page: blockSize computed from container width, calendar fills via `.fill` CSS class
+- Sidebar (ProjectSelected): blockSize computed from stats panel height, horizontal scroll
+- fontSize scales with blockSize, CSS variable `--calendar-font-size` drives all internal text
+- Pagination overrides via descendant selectors on wrapper
 
-### Phase R5: Projects Page Fluidity — NOT STARTED
-- [ ] ProjectsContent: Featured cards (text, icons, padding, rounded)
-- [ ] ProjectSubContent: Other projects list, GitHub calendar, Contact
-- [ ] ProjectSelectedContent: Detail page
+## Active Work: Tablet View (md: 768px-1023px) 🟡
 
-### Phase R6: Achievements Page Fluidity — NOT STARTED
-- [ ] Achievement cards: text, images, padding
-- [ ] Category sections
+### Implemented:
+- [x] Sidebar visible at md: breakpoint (`hidden md:block`)
+- [x] Mobile bar/drawer hidden at md: (`md:hidden`)
+- [x] App.jsx: `md:flex-row` + `lg:h-screen lg:overflow-hidden`
+- [x] Sidebar: `md:w-[30%] lg:w-[23%]`, `sticky top-3`, scrollable via `overflow-y-auto`
+- [x] Sidebar height: `lg:h-[calc(100vh-clamp(24px,1.7vw,8rem))]` + `md:max-h-[calc(100vh-...)]`
+- [x] Bottom spacer div for scroll padding fix
 
-### Phase R7: Blog Page Fluidity — NOT STARTED
-- [ ] Blog list cards
-- [ ] Blog detail content rendering
-
-### Phase R8: Testing — NOT STARTED
-- [ ] Cross-browser (Chrome, Firefox, Safari, Edge)
-- [ ] Multi-device (1366px, 1920px, 2560px+)
-- [ ] Mobile regression (< 1024px must be untouched)
-- [ ] Zoom in/out at 100%–200%
-- [ ] Lighthouse audit
+### Pending:
+- [ ] About page: 2-col layout tight at zoomed desktop — may need `[2fr_1.5fr]` or earlier breakpoint
+- [ ] Verify all pages at md: breakpoint (768-1023px actual tablet device)
+- [ ] Content containers: ensure `lg:` overflow/padding classes work correctly across all pages
 
 ## Known Issues / Notes
-- Dark mode Switch: uses `[zoom:clamp()]` wrapper since ui/ components can't be modified
-- Highlights date text: stuck at small size when zoomed out (tried 1.1vw but still appears small — may need investigation)
-- Sidebar width: changed from `w-[18%]` to `w-[20%]` by user
+- Certificate dialog: portaled outside #root, uses JS-driven `transform: scale()` for zoom-out
+- `overflow-y-auto` on scroll containers eats bottom padding — solved with spacer divs
+- Sidebar `text-nowrap` items clip at narrow widths on high zoom — acceptable tradeoff
 - `index.css` zoom rule: `zoom: calc(100vw / 1440)` at `@media (min-width: 1440px)`
-
-## Files Modified This Session
-- `src/index.css` — zoom breakpoint changed from 1600 to 1440
-- `src/components/BentoCard.jsx` — fluid padding, gap, rounded, icon sizing
-- `src/components/ContactMe.jsx` — fluid icon sizes, gaps, text
-- `src/components/Sidebar.jsx` — full desktop sidebar fluidity + shrink-0
-- `src/components/home/HomeContent.jsx` — banner, stats, highlights all fluid + ResizeObserver
-- `src/components/home/HomeSubContent.jsx` — skills accordion fluidity
-- `src/components/home/TechMarquee.jsx` — fluid icon size, padding, gap override
+- `.calendar-wrapper.fill` scoped CSS makes calendar fill only in full-width context
