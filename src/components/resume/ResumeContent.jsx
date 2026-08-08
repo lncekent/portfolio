@@ -14,24 +14,36 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 let isLoaded = false;
 
 function ResumeContent() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const getScale = (w) => (w < 1024 ? 0.45 : w / 1150);
 
+  const [scale, setScale] = useState(() => getScale(window.innerWidth));
+
+  // Debounce the scale update: during a zoom gesture the browser fires many
+  // resize events. Re-rendering the PDF on each one causes the "quick reload"
+  // flicker. Instead we wait until zooming settles (~200ms) and re-render once.
+  // While zooming, the CSS `zoom` on #root scales the existing PDF smoothly.
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
+    let timeout;
+    const handleResize = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        setScale(getScale(window.innerWidth));
+      }, 200);
+    };
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
-
-  const initialScale = windowWidth < 1024 ? 0.45 : 1.25;
-
-  const [scale, setScale] = useState(initialScale);
-
-  useEffect(() => {
-    setScale(initialScale);
-  }, [initialScale]);
 
   const zoomIn = () => setScale((prev) => Math.min(prev + 0.2, 2.5));
   const zoomOut = () => setScale((prev) => Math.max(prev - 0.2, 0.4));
+
+  // Intrinsic PDF page size (points at scale 1). Captured once on load.
+  // Used to reserve the exact rendered space so the container never collapses
+  // while react-pdf redraws the canvas at a new scale.
+  const [pageSize, setPageSize] = useState({ width: 612, height: 792 });
 
   const [isLoading, setIsLoading] = useState(!isLoaded);
 
@@ -85,52 +97,58 @@ function ResumeContent() {
   }
 
   return (
-    <div className="w-full h-full lg:pr-3 px-3 lg:px-0 py-3 overflow-y-auto no-scrollbar overflow-hidden flex flex-col gap-3">
+    <div className="w-full h-full lg:pr-[clamp(12px,0.85vw,3rem)] px-3 lg:px-0 py-[clamp(12px,0.85vw,3rem)] overflow-y-auto no-scrollbar overflow-hidden flex flex-col gap-[clamp(12px,0.85vw,3rem)]">
       <BentoCard
         title={"Resume"}
         icon={<FileUser className="stroke-black" />}
         className="w-full relative gap-4 "
       >
-        <button
+        <div
           className={
-            "animate-in fade-in duration-700 delay-300 fill-mode-backwards absolute top-3.5 right-4.5 cursor-pointer lg:text-[16px] text-sm  text-zinc-900 z-10 stroke-black group"
+            " absolute top-[clamp(14px,1vw,4rem)] right-[clamp(18px,1.25vw,4rem)] cursor-pointer text-[clamp(16px,1.2vw,4rem)] text-zinc-900 z-10 stroke-black group"
           }
           asChild
         >
           <a
             href="/Magollado-Lance-Kent-Geoffrey-Resume.pdf"
             download={"Lance_Kent_Geoffrey_B_Magollado_Resume.pdf"}
-            className="flex gap-2 items-center py-1 px-2 rounded-sm lg:py-2 lg:px-4 border hover:bg-zinc-200 dark:bg-white  transition duration-300 ease-out"
+            className="flex gap-[clamp(8px,0.5vw,4rem)] items-center py-[clamp(4px,0.55vw,1.5rem)] px-[clamp(8px,1.1vw,4rem)] rounded-[clamp(4px,0.55vw,2.5rem)] border hover:bg-zinc-200 dark:bg-white "
           >
             <Download
               strokeWidth={1.5}
-              className="stroke-zinc-900 group-hover:stroke-zinc-900 w-4.5 "
+              className="stroke-zinc-900 group-hover:stroke-zinc-900 w-[clamp(18px,1.25vw,4rem)] h-auto"
             />
-            <span className="lg:block hidden">Download</span>
+            <span className="lg:block hidden ">Download</span>
           </a>
-        </button>
+        </div>
 
         <div className="animate-in fade-in duration-700 delay-300 fill-mode-backwards relative w-full h-125 mt-3 lg:h-auto rounded-[10px] overflow-hidden bg-[#1a1a1a]">
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          <div className="absolute bottom-[clamp(24px,1.65vw,4rem)] left-1/2 -translate-x-1/2 flex gap-[clamp(8px,0.5vw,4rem)] z-20">
             <Button
               variant="secondary"
               onClick={zoomOut}
-              className="w-10 h-10 p-0 rounded-full text-lg shadow-md cursor-pointer hover:bg-gray-200"
+              className="w-[clamp(40px,2.8vw,200px)] h-[clamp(40px,2.8vw,200px)] p-0 rounded-full text-[clamp(18px,1.2vw,4rem)] shadow-md cursor-pointer hover:bg-gray-200"
             >
               -
             </Button>
             <Button
               variant="secondary"
               onClick={zoomIn}
-              className="w-10 h-10 p-0 rounded-full text-lg shadow-md cursor-pointer hover:bg-gray-200"
+              className="w-[clamp(40px,2.8vw,200px)] h-[clamp(40px,2.8vw,200px)] p-0 rounded-full text-[clamp(18px,1.2vw,4rem)] shadow-md cursor-pointer hover:bg-gray-200"
             >
               +
             </Button>
           </div>
 
           <div className="w-full h-full overflow-auto no-scrollbar">
-            <div className="min-w-full min-h-full w-fit flex justify-center items-center lg:p-10 mx-auto p-2 transition-all duration-300">
-              <div className="shadow-2xl bg-white">
+            <div className="min-w-full min-h-full w-fit flex justify-center items-center lg:p-10 mx-auto p-2">
+              <div
+                className="shadow-2xl bg-white shrink-0"
+                style={{
+                  width: pageSize.width * scale,
+                  height: pageSize.height * scale,
+                }}
+              >
                 <Document
                   file="/Magollado-Lance-Kent-Geoffrey-Resume.pdf"
                   loading={<p className="text-black m-10">Loading resume...</p>}
@@ -141,6 +159,12 @@ function ResumeContent() {
                   <Page
                     pageNumber={1}
                     scale={scale}
+                    onLoadSuccess={(page) =>
+                      setPageSize({
+                        width: page.originalWidth,
+                        height: page.originalHeight,
+                      })
+                    }
                     renderTextLayer={true}
                     renderAnnotationLayer={true}
                   />
