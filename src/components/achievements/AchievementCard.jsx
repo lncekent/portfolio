@@ -1,16 +1,33 @@
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { useState } from "react";
+import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
+import { useState, useEffect } from "react";
 import {
   ExternalLink,
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  X,
 } from "lucide-react";
 
 function AchievementCard({ data, list, variant = "card" }) {
   const initialIndex = list ? list.findIndex((item) => item.id === data.id) : 0;
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const currentData = list ? list[currentIndex] : data;
+
+  // The dialog is portaled outside #root, so it doesn't inherit the app's
+  // zoom scaling. Replicate that scaling here with a single uniform transform
+  // so the modal grows on zoom-out while keeping its exact proportions.
+  const [uiScale, setUiScale] = useState(() =>
+    typeof window !== "undefined" && window.innerWidth >= 1440
+      ? window.innerWidth / 1440
+      : 1,
+  );
+
+  useEffect(() => {
+    const onResize = () =>
+      setUiScale(window.innerWidth >= 1440 ? window.innerWidth / 1440 : 1);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const handleNext = () => {
     if (currentIndex < list.length - 1) setCurrentIndex((prev) => prev + 1);
@@ -42,39 +59,39 @@ function AchievementCard({ data, list, variant = "card" }) {
               <img
                 src={data.image}
                 alt={data.title}
-                className="w-full h-full object-contain p-2 transition-transform duration-500 ease-out "
+                className="w-full h-full object-contain p-[clamp(0.5rem,0.6vw,2rem)] transition-transform duration-500 ease-out "
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none"></div>
-              <div className="absolute bottom-3 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex items-center gap-1.5 text-white z-10">
-                <ExternalLink strokeWidth={2} className="w-3.75 h-3.75" />
-                <span className="text-[13px] font-medium tracking-wide">
+              <div className="absolute bottom-[clamp(0.75rem,0.85vw,3rem)] left-[clamp(1rem,1.1vw,3rem)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex items-center gap-[clamp(0.375rem,0.45vw,1.5rem)] text-white z-10">
+                <ExternalLink strokeWidth={2} className="w-[clamp(0.9375rem,1.1vw,3rem)] h-[clamp(0.9375rem,1.1vw,3rem)]" />
+                <span className="text-[clamp(13px,0.95vw,3rem)] font-medium tracking-wide">
                   View Certificate
                 </span>
               </div>
             </div>
 
-            <div className="py-4 flex gap-3 items-start bg-card flex-1">
-              <div className="w-8 h-8 rounded-md bg-white dark:bg-zinc-800 shrink-0 overflow-hidden border border-zinc-200 dark:border-zinc-700 flex items-center justify-center p-0.5 shadow-sm">
+            <div className="py-[clamp(1rem,1.1vw,3rem)] flex gap-[clamp(0.75rem,0.85vw,3rem)] items-start bg-card flex-1">
+              <div className="w-[clamp(2rem,2.4vw,7rem)] h-[clamp(2rem,2.4vw,7rem)] rounded-md bg-white dark:bg-zinc-800 shrink-0 overflow-hidden border border-zinc-200 dark:border-zinc-700 flex items-center justify-center p-[clamp(0.125rem,0.15vw,0.75rem)] shadow-sm">
                 <img
                   src={data.issuerLogo}
                   alt={data.issuer + " Logo"}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="flex flex-col gap-1.5  h-full">
-                <div className="flex flex-col leading-3">
+              <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)]  h-full">
+                <div className="flex flex-col leading-tight">
                   <h1
-                    className="font-semibold text-[16px] text-zinc-900 dark:text-zinc-100 leading-snug line-clamp-1"
+                    className="font-semibold text-[clamp(16px,1.1vw,4rem)] text-zinc-900 dark:text-zinc-100 leading-snug line-clamp-1"
                     title={data.title}
                   >
                     {data.title}
                   </h1>
-                  <p className="text-[14px] line-clamp-1 text-zinc-600 dark:text-zinc-400 font-medium mt-0.5">
+                  <p className="text-[clamp(14px,1vw,3.5rem)] line-clamp-1 text-zinc-600 dark:text-zinc-400 font-medium mt-[clamp(0.125rem,0.2vw,1rem)]">
                     {data.issuer}
                   </p>
                 </div>
-                <div className="flex gap-1.5 items-center mt-1 ">
-                  <p className="text-[12px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
+                <div className="flex gap-[clamp(0.375rem,0.45vw,1.5rem)] items-center mt-[clamp(0.25rem,0.3vw,1.5rem)] ">
+                  <p className="text-[clamp(12px,0.85vw,2.5rem)] text-zinc-500 dark:text-zinc-400 line-clamp-1">
                     Issued {data.date}
                   </p>
                 </div>
@@ -84,8 +101,8 @@ function AchievementCard({ data, list, variant = "card" }) {
         </DialogTrigger>
       ) : (
         <div className="flex flex-col w-full outline-none">
-          <div className="flex gap-4 items-start">
-            <div className="w-12 h-12 bg-white dark:bg-zinc-900 rounded-md  border border-zinc-200 dark:border-zinc-800 p-1.5 shrink-0 flex items-center justify-center">
+          <div className="flex gap-[clamp(0.75rem,1.1vw,3rem)] items-start">
+            <div className="w-[clamp(3rem,3.5vw,10rem)] h-[clamp(3rem,3.5vw,10rem)] bg-white dark:bg-zinc-900 rounded-md border border-zinc-200 dark:border-zinc-800 p-[clamp(0.375rem,0.45vw,1.5rem)] shrink-0 flex items-center justify-center">
               <img
                 src={data.issuerLogo}
                 alt={data.issuer}
@@ -93,20 +110,23 @@ function AchievementCard({ data, list, variant = "card" }) {
               />
             </div>
             <div className="flex flex-col">
-              <h1 className="font-bold text-[15px] lg:text-[16px] text-zinc-900 dark:text-zinc-100 leading-tight">
+              <h1 className="font-bold text-[clamp(15px,1.1vw,4rem)] text-zinc-900 dark:text-zinc-100 leading-tight">
                 {data.title}
               </h1>
-              <p className="text-[14px] text-zinc-700 dark:text-zinc-300 font-medium mt-0.5">
+              <p className="text-[clamp(14px,1vw,3.5rem)] text-zinc-700 dark:text-zinc-300 font-medium mt-[clamp(0.125rem,0.2vw,1rem)]">
                 {data.issuer}
               </p>
-              <p className="text-[13px] text-zinc-500 dark:text-zinc-400 font-light mt-0.5 mb-2.5">
+              <p className="text-[clamp(13px,0.95vw,3rem)] text-zinc-500 dark:text-zinc-400 font-light mt-[clamp(0.125rem,0.2vw,1rem)] mb-[clamp(0.625rem,0.7vw,2rem)]">
                 Issued {data.date}
               </p>
 
               <DialogTrigger asChild>
-                <button className="w-fit flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-[14px] font-semibold text-zinc-700 dark:text-zinc-200 cursor-pointer">
+                <button className="w-fit flex items-center gap-[clamp(0.375rem,0.45vw,1.5rem)] px-[clamp(0.875rem,1vw,3rem)] py-[clamp(0.375rem,0.45vw,1.5rem)] rounded-full border border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-[clamp(14px,1vw,3.5rem)] font-semibold text-zinc-700 dark:text-zinc-200 cursor-pointer">
                   <span>View Certificate</span>
-                  <ExternalLink strokeWidth={2} className="w-3.75 h-3.75" />
+                  <ExternalLink
+                    strokeWidth={2}
+                    className="w-[clamp(0.9375rem,1.1vw,3rem)] h-[clamp(0.9375rem,1.1vw,3rem)]"
+                  />
                 </button>
               </DialogTrigger>
             </div>
@@ -115,10 +135,16 @@ function AchievementCard({ data, list, variant = "card" }) {
       )}
 
       <DialogContent
+        showCloseButton={false}
         className={
           "w-full lg:max-w-5xl max-h-[85vh] select-none border-none bg-card p-8 shadow-2xl rounded-3xl grid lg:grid-cols-[2fr_1fr] overflow-hidden overflow-y-auto no-scrollbar"
         }
+        style={uiScale > 1 ? { transform: `scale(${uiScale})`, transformOrigin: "center" } : undefined}
       >
+        <DialogClose className="absolute top-4 right-4 z-20 rounded-xs opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+          <X className="w-5 h-5" />
+          <span className="sr-only">Close</span>
+        </DialogClose>
         <div className="flex flex-col overflow-hidden pt-4 lg:pt-0">
           <div className=" w-full h-full overflow-y-auto border border-zinc-200/50  dark:border-zinc-800/50 rounded-xl overflow-hidden bg-zinc-50/80 dark:bg-zinc-900/50 no-scrollbar relative">
             <div className="min-h-full flex items-center justify-center">

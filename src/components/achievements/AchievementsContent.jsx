@@ -30,18 +30,18 @@ function AchievementsContent() {
 
   if (isLoading) {
     return (
-      <div className="w-full flex flex-col gap-3 px-3 lg:pl-0 lg:overflow-y-auto lg:no-scrollbar lg:py-3 pt-3 select-none min-h-[101vh] pb-3">
+      <div className="w-full flex flex-col gap-[clamp(12px,0.85vw,3rem)] px-3 lg:pl-0 lg:overflow-y-auto lg:no-scrollbar lg:py-[clamp(12px,0.85vw,3rem)] pt-3 select-none min-h-[101vh] pb-[clamp(12px,0.85vw,3rem)]">
         <BentoCard
           title={"Technical Certifications"}
           icon={<Award className="stroke-black" />}
         >
-          <div className="grid lg:grid-cols-4 grid-cols-1 gap-6">
+          <div className="grid lg:grid-cols-4 grid-cols-1 gap-[clamp(1rem,1.5vw,4rem)]">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="flex flex-col gap-4 py-1">
-                <Skeleton className="w-full h-40 rounded-[10px]" />
-                <div className="flex flex-col gap-1.5 w-full">
-                  <Skeleton className="h-5 w-3/4" />
-                  <Skeleton className="h-4 w-1/2" />
+              <div key={i} className="flex flex-col gap-[clamp(0.75rem,0.9vw,2.5rem)] py-[clamp(0.25rem,0.3vw,1.5rem)]">
+                <Skeleton className="w-full h-[clamp(10rem,14vw,40rem)] rounded-[10px]" />
+                <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] w-full">
+                  <Skeleton className="h-[clamp(1.25rem,1.4vw,4rem)] w-3/4" />
+                  <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-1/2" />
                 </div>
               </div>
             ))}
@@ -52,13 +52,13 @@ function AchievementsContent() {
           title={"Leadership & Milestones"}
           icon={<BookOpenText className="stroke-black" />}
         >
-          <div className="grid lg:grid-cols-4 grid-cols-1 gap-6">
+          <div className="grid lg:grid-cols-4 grid-cols-1 gap-[clamp(1rem,1.5vw,4rem)]">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="flex flex-col gap-4 py-1">
-                <Skeleton className="w-full h-40 rounded-[10px]" />
-                <div className="flex flex-col gap-1.5 w-full">
-                  <Skeleton className="h-5 w-3/4" />
-                  <Skeleton className="h-4 w-1/2" />
+              <div key={i} className="flex flex-col gap-[clamp(0.75rem,0.9vw,2.5rem)] py-[clamp(0.25rem,0.3vw,1.5rem)]">
+                <Skeleton className="w-full h-[clamp(10rem,14vw,40rem)] rounded-[10px]" />
+                <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] w-full">
+                  <Skeleton className="h-[clamp(1.25rem,1.4vw,4rem)] w-3/4" />
+                  <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-1/2" />
                 </div>
               </div>
             ))}
@@ -69,17 +69,17 @@ function AchievementsContent() {
           title="Contact Me"
           icon={<Phone className="stroke-black" />}
         >
-          <div className="flex flex-col justify-between gap-10">
-            <ul className="flex gap-4 w-full flex-wrap">
+          <div className="flex flex-col justify-between gap-[clamp(1.5rem,2vw,5rem)]">
+            <ul className="flex gap-[clamp(0.75rem,0.9vw,2.5rem)] w-full flex-wrap">
               {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-                <li key={i} className="w-9 h-9">
+                <li key={i} className="w-[clamp(2.25rem,2.6vw,8rem)] h-[clamp(2.25rem,2.6vw,8rem)]">
                   <Skeleton className="w-full h-full rounded-full" />
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col gap-1.5 mt-2">
-              <Skeleton className="h-4 w-full" />
-              <Skeleton className="h-4 w-5/6" />
+            <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] mt-[clamp(0.5rem,0.6vw,2rem)]">
+              <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-full" />
+              <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-5/6" />
             </div>
           </div>
         </BentoCard>
@@ -88,14 +88,14 @@ function AchievementsContent() {
   }
 
   return (
-    <div className="py-3 px-3 lg:px-0 lg:pr-3 overflow-y-scroll flex-col gap-3 no-scrollbar w-full flex  min-w-0 [scrollbar-gutter:stable]">
+    <div className="py-[clamp(12px,0.85vw,3rem)] px-3 lg:px-0 lg:pr-[clamp(12px,0.85vw,3rem)] overflow-y-scroll flex-col gap-[clamp(12px,0.85vw,3rem)] no-scrollbar w-full flex  min-w-0 [scrollbar-gutter:stable]">
       <BentoCard
         title={"Technical Certifications"}
         icon={<Award className="stroke-black" />}
       >
         <div
           key="ac-grid-1"
-          className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform grid lg:grid-cols-4 grid-cols-1 gap-6"
+          className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform grid lg:grid-cols-4 grid-cols-1 gap-[clamp(1rem,1.5vw,4rem)]"
         >
           {certifications.map((cert) => (
             <AchievementCard key={cert.id} data={cert} list={certifications} />
@@ -109,7 +109,7 @@ function AchievementsContent() {
       >
         <div
           key="ac-grid-2"
-          className="animate-in fade-in duration-700 delay-200 fill-mode-both transform-gpu will-change-transform grid lg:grid-cols-4 grid-cols-1 gap-6"
+          className="animate-in fade-in duration-700 delay-200 fill-mode-both transform-gpu will-change-transform grid lg:grid-cols-4 grid-cols-1 gap-[clamp(1rem,1.5vw,4rem)]"
         >
           {education.map((edu) => (
             <AchievementCard key={edu.id} data={edu} list={education} />
