@@ -54,24 +54,24 @@ function AboutContent() {
 
   if (isLoading) {
     return (
-      <div className="overflow-y-auto py-3 w-full gap-3 flex flex-col no-scrollbar select-none min-h-[101vh] ">
+      <div className="overflow-y-auto py-[clamp(12px,0.85vw,3rem)] w-full gap-[clamp(12px,0.85vw,3rem)] flex flex-col no-scrollbar select-none min-h-[101vh] ">
         {/* Hero Banner Skeleton */}
-        <div className="w-full flex flex-col rounded-[14px] shrink-0 overflow-hidden relative group select-none">
+        <div className="w-full flex flex-col rounded-[clamp(10px,1vw,3rem)] shrink-0 overflow-hidden relative group select-none">
           <Skeleton className="w-full absolute inset-0 z-0 rounded-none " />
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/50 lg:to-transparent z-10 pointer-events-none"></div>
 
-          <div className="w-full relative h-70 sm:h-75 lg:h-64 z-20">
-            <div className="absolute bottom-5 left-5 right-5 lg:bottom-8 lg:left-8 lg:right-auto z-20 flex flex-col gap-3 lg:gap-4 max-w-2xl">
-              <div className="flex flex-col gap-2 w-full">
-                <Skeleton className="h-8 lg:h-10 w-62.5 bg-white/20" />
-                <div className="mt-1 lg:mt-3 flex flex-col gap-2 w-[95%] lg:w-112.5">
-                  <Skeleton className="h-4 w-[90%] bg-white/20" />
-                  <Skeleton className="h-4 w-[80%] bg-white/20" />
-                  <Skeleton className="h-4 w-[70%] bg-white/20" />
+          <div className="w-full relative aspect-video sm:aspect-16/7 min-h-75 lg:min-h-70 xl:min-h-70 h-auto z-20">
+            <div className="absolute bottom-[clamp(20px,2.2vw,5rem)] left-[clamp(20px,2.2vw,5rem)] right-5 lg:right-auto z-20 flex flex-col gap-[clamp(12px,1.1vw,3rem)]">
+              <div className="flex flex-col gap-[clamp(4px,0.2vw,3rem)] w-full">
+                <Skeleton className="h-[clamp(2.3rem,2.8vw,9.25rem)] w-[clamp(15rem,18vw,50rem)] bg-white/20" />
+                <div className="mt-1 lg:mt-2 flex flex-col gap-[clamp(0.25rem,0.4vw,1.5rem)] max-w-[clamp(90%,50%,90%)]">
+                  <Skeleton className="h-[clamp(0.8125rem,1.1vw,3.6rem)] w-[90%] bg-white/20" />
+                  <Skeleton className="h-[clamp(0.8125rem,1.1vw,3.6rem)] w-[80%] bg-white/20" />
+                  <Skeleton className="h-[clamp(0.8125rem,1.1vw,3.6rem)] w-[70%] bg-white/20" />
                 </div>
               </div>
-              <div className="flex lg:flex-row flex-col items-start gap-3 mt-1 lg:mt-2 w-full lg:w-auto">
-                <Skeleton className="w-[90%] sm:w-37.5 h-14 lg:h-6.5 rounded-[10px] bg-white/20" />
+              <div className="flex lg:flex-row flex-col items-start gap-[clamp(12px,0.85vw,3rem)] mt-1 lg:mt-2 w-full lg:w-auto">
+                <Skeleton className="w-full sm:w-auto sm:px-[clamp(1.25rem,1.5vw,5.25rem)] h-[clamp(2.5rem,3vw,9rem)] rounded-[clamp(10px,0.7vw,3rem)] bg-white/20" />
               </div>
             </div>
           </div>
@@ -82,11 +82,11 @@ function AboutContent() {
           icon={<User className="stroke-black" />}
           className="leading-5"
         >
-          <div className="flex flex-col gap-1.5 w-full mt-2">
-            <Skeleton className="h-4 w-11/12" />
-            <Skeleton className="h-4 w-full" />
-            <Skeleton className="h-4 w-11/12" />
-            <Skeleton className="h-4 w-4/5" />
+          <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] w-full mt-[clamp(0.5rem,0.6vw,2rem)]">
+            <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-11/12" />
+            <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-full" />
+            <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-11/12" />
+            <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-4/5" />
           </div>
         </BentoCard>
 
@@ -95,13 +95,13 @@ function AboutContent() {
           icon={<Pin className="stroke-black" />}
           className="relative"
         >
-          <div className="flex gap-3 overflow-x-hidden w-full">
+          <div className="flex gap-[clamp(0.5rem,0.7vw,3rem)] overflow-x-hidden w-full">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="flex flex-col w-57.5 shrink-0 gap-3">
-                <Skeleton className="w-full aspect-14/10 rounded-2xl" />
-                <div className="flex flex-col gap-2 p-1">
-                  <Skeleton className="h-4 w-3/4" />
-                  <Skeleton className="h-4 w-1/2" />
+              <div key={i} className="flex flex-col flex-1 min-w-[clamp(220px,16vw,800px)] shrink-0 gap-[clamp(0.5rem,0.7vw,3rem)]">
+                <Skeleton className="w-full aspect-14/10 rounded-[clamp(0.75rem,1vw,3rem)]" />
+                <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] p-[clamp(0.75rem,1.2vw,5rem)]">
+                  <Skeleton className="h-[clamp(1rem,1.1vw,5rem)] w-3/4" />
+                  <Skeleton className="h-[clamp(1rem,1.1vw,5rem)] w-1/2" />
                 </div>
               </div>
             ))}
@@ -112,18 +112,18 @@ function AboutContent() {
           title={"Certificates"}
           icon={<Award className="stroke-black" />}
         >
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col w-full gap-5 lg:pr-2">
+          <div className="flex flex-col gap-[clamp(1rem,1.5vw,4rem)]">
+            <div className="flex flex-col w-full gap-[clamp(1rem,1.1vw,3rem)] lg:pr-[clamp(0.5rem,0.6vw,2rem)]">
               {[1, 2, 3, 4, 5].map((i) => (
                 <div
                   key={i}
-                  className={`flex flex-col w-full ${i !== 5 ? "border-b border-zinc-100 dark:border-zinc-800/80 pb-5" : ""}`}
+                  className={`flex flex-col w-full ${i !== 5 ? "border-b border-zinc-100 dark:border-zinc-800/80 pb-[clamp(1rem,1.1vw,3rem)]" : ""}`}
                 >
-                  <div className="flex gap-4 items-center">
-                    <Skeleton className="w-13 h-13 rounded-[10px] shrink-0" />
-                    <div className="flex flex-col gap-2 w-full">
-                      <Skeleton className="h-4 w-3/4" />
-                      <Skeleton className="h-3 w-1/2" />
+                  <div className="flex gap-[clamp(0.75rem,1.1vw,3rem)] items-center">
+                    <Skeleton className="w-[clamp(3rem,3.5vw,10rem)] h-[clamp(3rem,3.5vw,10rem)] rounded-[10px] shrink-0" />
+                    <div className="flex flex-col gap-[clamp(0.5rem,0.6vw,2rem)] w-full">
+                      <Skeleton className="h-[clamp(1rem,1.1vw,3rem)] w-3/4" />
+                      <Skeleton className="h-[clamp(0.75rem,0.85vw,2.5rem)] w-1/2" />
                     </div>
                   </div>
                 </div>
@@ -136,9 +136,10 @@ function AboutContent() {
   }
 
   return (
-    <div className=" py-3 w-full gap-3 flex flex-col no-scrollbar lg:overflow-y-auto select-none">
-      <div className="w-full flex flex-col bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent rounded-[14px] shrink-0 overflow-hidden relative group select-none">
-        <div className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform w-full relative h-70 sm:h-75 lg:h-64">
+    <div className="py-[clamp(12px,0.85vw,3rem)] w-full gap-[clamp(12px,0.85vw,3rem)] flex flex-col no-scrollbar lg:overflow-y-auto select-none">
+      {/* Banner Section */}
+      <div className="w-full flex flex-col bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent rounded-[clamp(10px,1vw,3rem)] shrink-0 overflow-hidden relative group select-none">
+        <div className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform w-full relative aspect-video sm:aspect-16/7 min-h-75 lg:min-h-70 xl:min-h-70 h-auto">
           <video
             src="https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto:best,f_auto,w_1280,vc_auto/v1779602558/lightmode-banner_gcmym1.mp4"
             autoPlay
@@ -159,33 +160,30 @@ function AboutContent() {
           />
 
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/50 lg:to-transparent"></div>
-          <div className="absolute bottom-5 left-5 right-5 lg:bottom-8 lg:left-8 lg:right-auto z-20 flex flex-col gap-3 lg:gap-4 max-w-2xl">
-            <div className="flex flex-col gap-1">
-              <h1 className="text-white font-bold text-[28px] leading-[1.1] sm:text-3xl lg:text-4xl tracking-tight">
+          <div className="absolute bottom-[clamp(20px,2.2vw,5rem)] left-[clamp(20px,2.2vw,5rem)] right-5 lg:right-auto z-20 flex flex-col gap-[clamp(12px,1.1vw,3rem)]">
+            <div className="flex flex-col gap-[clamp(4px,0.2vw,3rem)]">
+              <h1 className="text-white font-bold leading-[1.1] text-[clamp(2.3rem,2.8vw,9.25rem)] tracking-tight">
                 Behind the code.
               </h1>
-              <p className="text-zinc-300 font-light text-[14px] sm:text-[15px] lg:text-[16px] mt-1 lg:mt-2 leading-relaxed max-w-[95%] lg:max-w-lg">
+              <p className="text-zinc-300 font-light text-[clamp(0.8125rem,1.1vw,3.6rem)] mt-1 lg:mt-2 leading-relaxed max-w-[clamp(90%,50%,90%)]">
                 I'm an IT student from Quezon City, passionate about
                 transforming complex problems into elegant, user-centric web
                 solutions.
               </p>
             </div>
 
-            <div className="flex lg:flex-row flex-col items-start gap-3 mt-1 lg:mt-2">
-              <Button
-                className="w-full sm:w-auto cursor-pointer rounded-[10px] bg-white text-zinc-900 hover:bg-zinc-200 shadow-sm transition-all duration-200 px-6 lg:px-8 py-5 lg:py-4 font-medium text-[14px] flex justify-center"
-                asChild
-              >
+            <div className="flex lg:flex-row flex-col items-start gap-[clamp(12px,0.85vw,3rem)] mt-1 lg:mt-2">
+              <button className="w-full sm:w-auto cursor-pointer rounded-[clamp(10px,0.7vw,3rem)] bg-white text-zinc-900 hover:bg-zinc-200 transition-all duration-200 flex text-[clamp(0.8125rem,0.95vw,120px)] px-[clamp(1.25rem,1.5vw,5.25rem)] py-[clamp(0.5rem,0.7vw,4.875rem)] justify-center">
                 <a
                   href="https://www.linkedin.com/in/lancemagollado/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-[clamp(0.375rem,0.5vw,2rem)]"
                 >
-                  <Send className="stroke-black" />
+                  <Send className="stroke-black w-[clamp(0.875rem,1vw,4rem)] h-[clamp(0.875rem,1vw,4rem)]" />
                   Let's Connect
                 </a>
-              </Button>
+              </button>
             </div>
           </div>
         </div>
@@ -199,14 +197,14 @@ function AboutContent() {
           key="about-txt-m"
           className="animate-in fade-in duration-700 delay-200 fill-mode-both transform-gpu will-change-transform gap-3 "
         >
-          <span className="text-[13px] lg:text-[14px] leading-relaxed text-zinc-600 dark:text-zinc-400 font-light">
+          <span className="text-[clamp(13px,1vw,5rem)] leading-relaxed text-zinc-600 dark:text-zinc-400 font-light">
             For over two years, I have been actively architecting digital
             solutions. My journey began with intensive full-stack projects—like
             BakeHub—which laid the foundation for my formal technical and
             leadership roles at StudyPool and LESIT.&nbsp;
           </span>
           {isExpanded && (
-            <span className="text-[13px] lg:text-[14px] leading-relaxed text-zinc-600 dark:text-zinc-400 font-light">
+            <span className="text-[clamp(13px,1vw,5rem)] leading-relaxed text-zinc-600 dark:text-zinc-400 font-light">
               Today, Front-End Development is my primary domain—a space where
               precise logic meets creative design. My ultimate trajectory is to
               evolve into a Full-Stack Developer, equipping me to engineer
@@ -215,7 +213,7 @@ function AboutContent() {
           )}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-[13px] lg:text-[14px] leading-relaxed text-[#3FA6F4] hover:underline cursor-pointer transition duration-200 ease-in-out font-medium"
+            className="text-[clamp(13px,1vw,5rem)] leading-relaxed text-[#3FA6F4] hover:underline cursor-pointer transition duration-200 ease-in-out font-medium"
           >
             {isExpanded ? "Read Less." : "Read More..."}
           </button>
@@ -227,29 +225,30 @@ function AboutContent() {
         className=" relative"
       >
         <div
-          className={`group absolute animate-in fade-in fill-mode-both transform-gpu will-change-transform right-5 z-10 top-37.5 bg-[#00000040] p-2 rounded-[100px] transition duration-75 ease-in ${canHighlightsRight ? "cursor-pointer hover:bg-[#3FA6F4]" : "cursor-not-allowed opacity-30 "}`}
+          className={`group animate-in fade-in fill-mode-both transform-gpu will-change-transform absolute right-[clamp(0.75rem,1.2vw,4rem)] z-10 top-1/2 -translate-y-1/2 bg-[#00000040] p-[clamp(0.375rem,0.5vw,2rem)] rounded-[100px] transition duration-75 ease-in ${canHighlightsRight ? "cursor-pointer hover:bg-[#3FA6F4]" : "cursor-not-allowed opacity-30 "}`}
           onClick={() =>
             canHighlightsRight && scrollCarousel(highlightsRef, "right")
           }
         >
           <ChevronRight
             strokeWidth={1.25}
-            className={`w-7.5 h-7.5 transition-colors duration-75 ${canHighlightsRight ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
+            className={`w-[clamp(1.5rem,1.8vw,7rem)] h-[clamp(1.5rem,1.8vw,7rem)] transition-colors duration-75 ${canHighlightsRight ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
           />
         </div>
         <div
-          className={`group absolute animate-in fade-in fill-mode-both transform-gpu will-change-transform left-5 z-10 top-37.5 bg-[#00000040] p-2 rounded-[100px] transition duration-75 ease-in ${canHighlightsLeft ? "cursor-pointer hover:bg-[#3FA6F4]" : "cursor-not-allowed opacity-30 "}`}
+          className={`group absolute animate-in fade-in fill-mode-both transform-gpu will-change-transform left-[clamp(0.75rem,1.2vw,4rem)] z-10 top-1/2 -translate-y-1/2 bg-[#00000040] p-[clamp(0.375rem,0.5vw,2rem)] rounded-[100px] transition duration-75 ease-in ${canHighlightsLeft ? "cursor-pointer hover:bg-[#3FA6F4]" : "cursor-not-allowed opacity-30 "}`}
           onClick={() =>
             canHighlightsLeft && scrollCarousel(highlightsRef, "left")
           }
         >
           <ChevronLeft
             strokeWidth={1.25}
-            className={`w-7.5 h-7.5 transition-colors duration-75 ${canHighlightsLeft ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
+            className={`w-[clamp(1.5rem,1.8vw,7rem)] h-[clamp(1.5rem,1.8vw,7rem)] transition-colors duration-75 ${canHighlightsLeft ? "stroke-black group-hover:stroke-white" : "stroke-black"}`}
           />
         </div>
         <div
-          className="animate-in fade-in duration-700 delay-250 fill-mode-both transform-gpu will-change-transform flex gap-3 overflow-x-auto no-scrollbar w-full justify-between"
+          key="highlights-m"
+          className="animate-in fade-in duration-700 delay-250 fill-mode-both transform-gpu will-change-transform flex w-full gap-[clamp(0.5rem,0.7vw,3rem)] overflow-x-auto no-scrollbar justify-between"
           ref={highlightsRef}
           onScroll={() =>
             handleScroll(
@@ -263,7 +262,7 @@ function AboutContent() {
             <Link
               key={post.id}
               to={`/blog-selected/${post.slug}`}
-              className="flex flex-col w-57.5 shrink-0 bg-white dark:bg-zinc-900/40 rounded-2xl border border-zinc-200 dark:border-zinc-800  transition-all duration-300 overflow-hidden group cursor-pointer"
+              className="flex flex-col flex-1 min-w-55 lg:min-w-[clamp(220px,16vw,800px)] max-w-none bg-white dark:bg-zinc-900/40 rounded-[clamp(0.75rem,1vw,3rem)] border border-zinc-200 dark:border-zinc-800 transition-all duration-300 overflow-hidden group cursor-pointer"
             >
               <div className="w-full aspect-14/10 bg-zinc-100 dark:bg-zinc-800 overflow-hidden relative">
                 <img
@@ -273,16 +272,14 @@ function AboutContent() {
                 />
               </div>
 
-              {/* TWEAK 3: The Text Section (Clean padding & flex alignment) */}
-              <div className="w-full flex flex-col justify-between flex-1 p-4 gap-2">
-                <h1 className="font-semibold text-zinc-900 dark:text-zinc-100 lg:text-[16px] text-[14px] leading-snug line-clamp-2">
+              <div className="w-full flex flex-col justify-between flex-1 p-[clamp(0.75rem,1.2vw,5rem)] gap-[clamp(0.375rem,0.6vw,2.5rem)]">
+                <h1 className="font-semibold text-zinc-900 dark:text-zinc-100 text-[clamp(1rem,1.1vw,5rem)] leading-snug line-clamp-2">
                   {post.title}
                 </h1>
 
-                {/* TWEAK 4: The Date (Forced to the bottom with mt-auto) */}
-                <div className="flex items-center gap-1.5 mt-auto">
-                  <Clock className="w-3.5 text-ring" />
-                  <p className="font-light text-[12px] text-ring">
+                <div className="flex items-center gap-[clamp(0.25rem,0.5vw,2rem)] mt-auto">
+                  <Clock className="stroke-ring w-[clamp(0.5rem,1vw,3rem)] h-[clamp(0.75rem,1.1vw,3rem)]" />
+                  <p className="font-light text-[clamp(0.6875rem,1vw,3rem)] text-ring line-clamp-1">
                     {post.date}
                   </p>
                 </div>
@@ -295,12 +292,12 @@ function AboutContent() {
         title={"Certificates"}
         icon={<Award className="stroke-black" />}
       >
-        <div className="animate-in fade-in duration-700 delay-300 fill-mode-both transform-gpu will-change-transform flex flex-col gap-6">
-          <div className="flex flex-col w-full gap-5 lg:pr-2">
+        <div className="animate-in fade-in duration-700 delay-300 fill-mode-both transform-gpu will-change-transform flex flex-col gap-[clamp(1rem,1.5vw,4rem)]">
+          <div className="flex flex-col w-full gap-[clamp(1rem,1.1vw,3rem)] lg:pr-[clamp(0.5rem,0.6vw,2rem)]">
             {achievementsData.slice(0, 5).map((cert, index) => (
               <div
                 key={cert.id}
-                className={`flex flex-col w-full ${index !== achievementsData.slice(0, 5).length - 1 ? "border-b border-zinc-100 dark:border-zinc-800/80 pb-5" : ""}`}
+                className={`flex flex-col w-full ${index !== achievementsData.slice(0, 5).length - 1 ? "border-b border-zinc-100 dark:border-zinc-800/80 pb-[clamp(1rem,1.1vw,3rem)]" : ""}`}
               >
                 <AchievementCard
                   data={cert}
@@ -313,7 +310,7 @@ function AboutContent() {
           <div className="w-full flex items-center justify-center">
             <Link
               to={"/achievements"}
-              className="text-center text-[#3FA6F4] hover:underline lg:text-[15px] text-sm"
+              className="text-center text-[#3FA6F4] hover:underline text-[clamp(14px,1vw,3rem)]"
             >
               See More
             </Link>
