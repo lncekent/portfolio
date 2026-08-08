@@ -170,10 +170,10 @@ function Content() {
   return (
     <div className="w-full flex flex-col gap-[clamp(12px,0.85vw,4rem)] lg:p-0 p-3 lg:overflow-y-auto lg:no-scrollbar lg:py-[clamp(12px,0.85vw,4rem)] select-none">
       {/* Banner Section */}
-      <div className="w-full flex flex-col bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent rounded-[clamp(10px,1vw,3rem)]  shrink-0 overflow-hidden relative group">
+      <div className="w-full flex flex-col bg-linear-to-t from-black/90 via-black/50 to-black/20 lg:bg-linear-to-r lg:from-black/90 lg:via-black/40 lg:to-transparent rounded-[clamp(10px,1vw,3rem)] shrink-0 overflow-hidden relative group">
         <div
           key="hero-m"
-          className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform w-full relative aspect-video sm:aspect-16/7  min-h-75 lg:min-h-80 xl:min-h-80 h-auto"
+          className="animate-in fade-in duration-700 delay-150 fill-mode-both transform-gpu will-change-transform w-full relative aspect-video sm:aspect-16/7 min-h-95 lg:min-h-80 xl:min-h-80 h-auto"
         >
           <video
             src="https://res.cloudinary.com/dxatb3m2q/video/upload/q_auto:best,f_auto,w_1280,vc_auto/v1779602558/lightmode-banner_gcmym1.mp4"
@@ -205,7 +205,7 @@ function Content() {
 
           <div className="absolute bottom-[clamp(1.25rem,2.5vw,5.75rem)] left-[clamp(1.25rem,2.5vw,5.75rem)] z-20 flex flex-col gap-[clamp(12px,1.1vw,6rem)] max-w-[85%] lg:max-w-[68%] w-full">
             <div className="flex flex-col gap-[clamp(4px,0.30vw,2rem)]">
-              <h1 className="text-white font-bold leading-[1.1] text-[clamp(1.625rem,2.8vw,9.25rem)] tracking-tight">
+              <h1 className="text-white font-bold leading-[1.1] text-[clamp(2.3rem,2.8vw,9.25rem)] tracking-tight">
                 Crafting clean & <br className="hidden sm:block" /> dynamic
                 digital systems.
               </h1>
