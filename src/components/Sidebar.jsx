@@ -82,13 +82,13 @@ function Sidebar() {
           >
             <div className="inset-0 absolute bg-white/70"></div>
             <div className="inset-0 absolute flex items-center justify-center">
-              <div className="relative flex items-center justify-center h-24 w-24">
+              <div className="relative flex items-center justify-center w-[clamp(100px,7vw,20rem)]">
                 <div className="absolute animate-ping rounded-full h-full w-full bg-[#3FA6F4] opacity-10"></div>
                 <div className="absolute animate-ping rounded-full h-3/4 w-3/4 bg-[#3FA6F4] opacity-20 [animation-delay:0.3s]"></div>
                 <img
                   src="https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775296257/me-daytime_c7zkax.png"
                   alt="Avatar Day"
-                  className="relative rounded-full h-25 w-25 border-2 border-[#3FA6F4] shadow-[0_0_30px_10px_#3FA6F4A0]"
+                  className="relative rounded-full w-[clamp(100px,7vw,20rem)] border-2 border-[#3FA6F4] shadow-[0_0_30px_10px_#3FA6F4A0]"
                 />
               </div>
             </div>
@@ -99,7 +99,7 @@ function Sidebar() {
           >
             <div className="inset-0 absolute bg-zinc-950/70"></div>
             <div className="inset-0 absolute flex items-center justify-center">
-              <div className="relative flex items-center justify-center h-24 w-24">
+              <div className="relative flex items-center justify-center w-[clamp(100px,7vw,20rem)]">
                 <div className="absolute animate-ping rounded-full h-full w-full bg-[#3FA6F4] opacity-10"></div>
 
                 <div className="absolute animate-ping rounded-full h-3/4 w-3/4 bg-[#3FA6F4] opacity-20 [animation-delay:0.3s]"></div>
@@ -107,7 +107,7 @@ function Sidebar() {
                 <img
                   src="https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1775296258/me-nighttime_le7sxn.png"
                   alt="Avatar Night"
-                  className="relative rounded-full h-25 w-25 border-2 border-[#3FA6F4] shadow-[0_0_30px_10px_#3FA6F4A0]"
+                  className="relative rounded-full w-[clamp(100px,7vw,20rem)] border-2 border-[#3FA6F4] shadow-[0_0_30px_10px_#3FA6F4A0]"
                 />
               </div>
             </div>
