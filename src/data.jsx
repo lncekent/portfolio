@@ -198,6 +198,60 @@ export const achievementsData = [
       </p>
     ),
   },
+   {
+    id: 13,
+    category: "certification",
+    title: "AI Career Readiness Training",
+    issuer: "ASEAN Foundation",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1786680217/1781236301275_twf856.jpg",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1786680381/certificate_ai-career-readiness_j8cbct.png",
+    date: "August 09, 2026",
+    verifyLink: null,
+    linkText: "",
+    description: (
+      <p>
+       Adopted the 5 modules for AI Career Readiness for the Modern World. Enhanced CVs, portfolios, interviews and LinkedIn impressions for more engagement and opportunities.
+      </p>
+    ),
+  },
+   {
+    id: 14,
+    category: "certification",
+    title: "Github Certified: AI Agentic Developer",
+    issuer: "Microsoft",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1784115076/microsoft-svgrepo-com_kbcab4.png",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1786680933/Screenshot_2026-08-12_121045_hxbpvq.png",
+    date: "August 12, 2026",
+    verifyLink: "https://learn.microsoft.com/api/credentials/share/en-us/LanceKentGeoffreyMagollado-6205/DF611535EB8BECC3?sharingId=A82CBDC6345D8E01",
+    linkText: "Verify Credentials",
+    description: (
+      <p>
+      Adopted Agentic AI Development for autonomous integration, development and structured workflow. By implementing coding agents with different responsibilities, enhances the building time and smart development.
+      </p>
+    ),
+  },
+   {
+    id: 15,
+    category: "education",
+    title: "EGOVPH Hackathon",
+    issuer: "Department of Information Technology",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1786682050/dictgovph_logo_epfbra.jpg",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1786682098/Lance_Kent_Geoffrey_Magollado_pages-to-jpg-0001_rwctj6.jpg",
+    date: "July 21-22, 2026",
+    verifyLink: null,
+    linkText: "Verify Credentials",
+    description: (
+      <p>
+      Participated to the first EGOVPH Hackathon in the country. And became one of the top 30 finalist winners out of 106 teams registered nationwide.
+      </p>
+    ),
+  },
 ];
 
 export const techStackData = [
