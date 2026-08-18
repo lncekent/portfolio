@@ -172,7 +172,7 @@ function ProjectSubContent({
                   {[...Array(7)].map((_, row) => (
                     <div
                       key={row}
-                      className="grid grid-cols-[repeat(53,minmax(0,1fr))] gap-[clamp(1px,0.15vw,4px)] w-full"
+                      className="grid grid-cols-53 gap-[clamp(1px,0.15vw,4px)] w-full"
                     >
                       {[...Array(53)].map((_, col) => (
                         <Skeleton
@@ -434,7 +434,7 @@ function ProjectSubContent({
                     {[...Array(7)].map((_, row) => (
                       <div
                         key={row}
-                        className="grid grid-cols-[repeat(53,minmax(0,1fr))] gap-[clamp(1px,0.15vw,4px)] w-full"
+                        className="grid grid-cols-53 gap-[clamp(1px,0.15vw,4px)] w-full"
                       >
                         {[...Array(53)].map((_, col) => (
                           <Skeleton

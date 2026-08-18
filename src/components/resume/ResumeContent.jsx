@@ -81,7 +81,10 @@ function ResumeContent() {
           <div className="flex flex-col justify-between gap-[clamp(1.5rem,2vw,5rem)] h-full">
             <ul className="flex gap-[clamp(0.75rem,0.9vw,2.5rem)] w-full flex-wrap">
               {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-                <li key={i} className="w-[clamp(2.25rem,2.6vw,8rem)] h-[clamp(2.25rem,2.6vw,8rem)]">
+                <li
+                  key={i}
+                  className="w-[clamp(2.25rem,2.6vw,8rem)] h-[clamp(2.25rem,2.6vw,8rem)]"
+                >
                   <Skeleton className="w-full h-full rounded-full" />
                 </li>
               ))}
@@ -110,8 +113,8 @@ function ResumeContent() {
           asChild
         >
           <a
-            href="/Magollado-Lance-Kent-Geoffrey-Resume.pdf"
-            download={"Lance_Kent_Geoffrey_B_Magollado_Resume.pdf"}
+            href="/Lance_Kent_Geoffrey_Magollado_RESUME.pdf"
+            download={"Lance_Kent_Geoffrey_Magollado_RESUME.pdf"}
             className="flex gap-[clamp(8px,0.5vw,4rem)] items-center py-[clamp(4px,0.55vw,1.5rem)] px-[clamp(8px,1.1vw,4rem)] rounded-[clamp(4px,0.55vw,2.5rem)] border hover:bg-zinc-200 dark:bg-white "
           >
             <Download
@@ -150,7 +153,7 @@ function ResumeContent() {
                 }}
               >
                 <Document
-                  file="/Magollado-Lance-Kent-Geoffrey-Resume.pdf"
+                  file="/Lance_Kent_Geoffrey_Magollado_RESUME.pdf"
                   loading={<p className="text-black m-10">Loading resume...</p>}
                   error={
                     <p className="text-red-500 m-10">Failed to load PDF.</p>
