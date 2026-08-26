@@ -245,7 +245,7 @@ export const achievementsData = [
   {
     id: 15,
     category: "education",
-    title: "EGOVPH Hackathon",
+    title: "EGOVPH Hackathon 2026",
     issuer: "Department of Information Technology",
     issuerLogo:
       "https://res.cloudinary.com/dxatb3m2q/image/upload/q_auto,f_auto/v1787747570/dict-logo_bn3lev.png",
