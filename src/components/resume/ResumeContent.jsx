@@ -154,7 +154,6 @@ function ResumeContent() {
               >
                 <Document
                   file="/Lance_Kent_Geoffrey_Magollado_RESUME.pdf"
-                  loading={<p className="text-black m-10">Loading resume...</p>}
                   error={
                     <p className="text-red-500 m-10">Failed to load PDF.</p>
                   }
