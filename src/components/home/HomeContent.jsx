@@ -137,7 +137,10 @@ function Content() {
         >
           <div className="grid lg:grid-cols-4 gap-[clamp(0.5rem,0.7vw,3rem)] grid-cols-2">
             {[1, 2, 3, 4].map((i) => (
-              <Skeleton key={i} className="w-full h-[clamp(8rem,9vw,25rem)] rounded-[clamp(10px,0.7vw,2rem)]" />
+              <Skeleton
+                key={i}
+                className="w-full h-[clamp(8rem,9vw,25rem)] rounded-[clamp(10px,0.7vw,2rem)]"
+              />
             ))}
           </div>
         </BentoCard>
@@ -149,7 +152,10 @@ function Content() {
         >
           <div className="flex w-full gap-[clamp(0.5rem,0.7vw,3rem)] overflow-x-hidden">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="flex flex-col flex-1 min-w-[clamp(220px,16vw,800px)] shrink-0 gap-[clamp(0.5rem,0.7vw,3rem)]">
+              <div
+                key={i}
+                className="flex flex-col flex-1 min-w-[clamp(220px,16vw,800px)] shrink-0 gap-[clamp(0.5rem,0.7vw,3rem)]"
+              >
                 <Skeleton className="w-full aspect-14/10 rounded-[clamp(0.75rem,1vw,3rem)]" />
                 <div className="flex flex-col gap-[clamp(0.375rem,0.45vw,1.5rem)] p-[clamp(0.75rem,1.2vw,5rem)]">
                   <Skeleton className="h-[clamp(1rem,1.1vw,5rem)] w-3/4" />
@@ -217,7 +223,7 @@ function Content() {
                 asChild
               >
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=lancemagollado46@gmail.com&su=Hi,%20Let%20us%20connect!"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=lancekentmagollado@gmail.com&su=Hi,%20Let%20us%20connect!"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-[clamp(0.375rem,0.5vw,2rem)]"
@@ -233,7 +239,7 @@ function Content() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-full w-full bg-green-500"></span>
                 </span>
-                Open to Collaborate
+                Looking for Internship
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@ function ContactMe({ wrapperClass = "", animKey = "contact-m" }) {
             </li>
             <li className="w-[clamp(2.25rem,2.5vw,8rem)]">
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=lancemagollado46@gmail.com&su=Hi,%20Let%20us%20connect!"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=lancekentmagollado@gmail.com&su=Hi,%20Let%20us%20connect!"
                 target="_blank"
                 rel="noopener noreferrer"
               >
