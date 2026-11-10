@@ -281,6 +281,46 @@ export const achievementsData = [
       </p>
     ),
   },
+  {
+    id: 17,
+    category: "certification",
+    title: "Front-End Web Development with Angular",
+    issuer: "Hytec Power, Inc.",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1794321251/hytec_gfuifp.webp",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1794321470/Enhanced_Frontend_Cert_i00ped.jpg",
+    date: "October 30, 2026",
+    verifyLink: null,
+    linkText: "Verify Credentials",
+    description: (
+      <p>
+        Adopted Conventional Codebase of Angular 19 Version. Experience in
+        Angular Development and completed a CRUD and contribute companies
+        codebase with feature and refactoring.
+      </p>
+    ),
+  },
+  {
+    id: 18,
+    category: "education",
+    title: "Top 30 Finalists EGOVPH Hackathon 2026",
+    issuer: "Hytec Power, Inc.",
+    issuerLogo:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1794321251/hytec_gfuifp.webp",
+    image:
+      "https://res.cloudinary.com/dxatb3m2q/image/upload/v1794321470/Enhanced_Frontend_Cert_i00ped.jpg",
+    date: "October 30, 2026",
+    verifyLink: null,
+    linkText: "Verify Credentials",
+    description: (
+      <p>
+        Adopted Conventional Codebase of Angular 19 Version. Experience in
+        Angular Development and completed a CRUD and contribute companies
+        codebase with feature and refactoring.
+      </p>
+    ),
+  },
 ];
 
 export const techStackData = [
